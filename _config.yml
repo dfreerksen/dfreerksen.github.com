@@ -1,0 +1,75 @@
+# Site
+title: Witheringtree
+description: This is a really great description of the site
+keywords:
+  - these
+  - are
+  - some
+  - really
+  - great
+  - keywords
+
+# Social networks
+social:
+  twitter: dfreerksen
+  facebook: dfreerksen
+  github: dfreerksen
+  instagram: dfreerksen
+
+# Disqus comments
+disqus: witheringtree
+
+# Analytics
+analytics:
+  google: UA-5476538-1
+
+# Site verification
+verification:
+  google: DvqQwg0_aFEcV8J-7wS1o3tWkZynlkho8d4YccmJIdY
+  msvalidate: 2DF3F9A0D051BCEBCBA8BDF524E0C7CF
+
+# Pagination
+paginate: 5
+paginate_path: page/:num/
+permalink: /:year/:month/:day/:title/
+
+# Timezone
+timezone: America/Los_Angeles
+
+# Encoding
+encoding: utf-8
+
+# Include in build
+include:
+  - .htaccess
+
+# CSS compression
+sass:
+  style: :compressed
+
+# Exclude in build
+exclude:
+  - README.md
+  - TODO.md
+  - Gemfile
+  - Gemfile.lock
+
+# URLs and paths
+baseurl: ""
+url: http://witheringtree.com
+
+# Default layouts
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      type: pages
+    values:
+      layout: page
+
+# Markdown
+markdown: redcarpet

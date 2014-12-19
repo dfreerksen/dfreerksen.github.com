@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  <div class="post-navigation">
+    <div class="left">
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}} ({{page.next.date | date: '%b %-d, %Y'}})">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+    </div>
+
+    <div class="right">
+      {% if page.next.url %}
+        <a href="{{page.next.url}}" title="Next Post: {{page.next.title}} ({{page.next.date | date: '%b %-d, %Y'}})">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div id="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+    var disqus_shortname = '{{ site.disqus }}';
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    //]]>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" target="_blank" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
