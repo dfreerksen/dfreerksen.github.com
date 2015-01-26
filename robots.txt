@@ -1,3 +1,4 @@
-User-agent: *
-Disallow: /404.html
-Disallow: /500.html
+User-Agent: *
+Disallow:
+Disallow: /contact/success/
+Disallow: /contact/success/index.html

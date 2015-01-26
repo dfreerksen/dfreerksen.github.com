@@ -1,13 +1,24 @@
 # Site
-title: Witheringtree
-description: This is a really great description of the site
+title: David Freerksen
+email: dfreerksen@gmail.com
+description: David Freerksen is a software engineer located in Elk Grove, Calfironia. Specializing in Ruby, Rails, PHP, SQL, HTML, CSS and Javascript development.
 keywords:
-  - these
-  - are
-  - some
-  - really
-  - great
-  - keywords
+  - david
+  - freerksen
+  - witheringtree
+  - ruby
+  - rails
+  - php
+
+# URLs and paths
+baseurl: ""
+url: "http://davidfreerksen.com"
+
+# Version
+version: 5.0.0
+
+# Encoding
+encoding: utf-8
 
 # Social networks
 social:
@@ -29,34 +40,9 @@ verification:
   msvalidate: 2DF3F9A0D051BCEBCBA8BDF524E0C7CF
 
 # Pagination
-paginate: 5
-paginate_path: page/:num/
-permalink: /:year/:month/:day/:title/
-
-# Timezone
-timezone: America/Los_Angeles
-
-# Encoding
-encoding: utf-8
-
-# Include in build
-include:
-  - .htaccess
-
-# CSS compression
-sass:
-  style: :compressed
-
-# Exclude in build
-exclude:
-  - README.md
-  - TODO.md
-  - Gemfile
-  - Gemfile.lock
-
-# URLs and paths
-baseurl: ""
-url: http://witheringtree.com
+paginate: 10
+permalink: /posts/:year/:month/:day/:title/
+paginate_path: /posts/page/:num
 
 # Default layouts
 defaults:
@@ -71,5 +57,19 @@ defaults:
     values:
       layout: page
 
+# CSS compression
+sass:
+  style: :compressed
+
+# Timezone
+timezone: America/Los_Angeles
+
+# Exclude in build
+exclude:
+  - README.md
+  - TODO.md
+  - DESIGN.md
+  - Gemfile
+
 # Markdown
-markdown: redcarpet
+markdown: kramdown
