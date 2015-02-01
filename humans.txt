@@ -11,15 +11,15 @@ layout: null
 
 /* TEAM */
 
-Development: David Freerksen
-URL:         {{ site.url }}
-Twitter:     @{{ site.social.twitter }}
-Location:    Elk Grove, CA
+Developer: David Freerksen
+Site:      {{ site.url }}
+Twitter:   @{{ site.social.twitter }}
+Location:  Elk Grove, CA
 
-Design:      Josh Boyd
-URL:         http://joshadamboyd.com
-Twitter:     @joshadamboyd
-Location:    Plano, TX
+Designer:  Josh Boyd
+Site:      http://joshadamboyd.com
+Twitter:   @joshadamboyd
+Location:  Plano, TX
 
 
 /* SITE */
@@ -28,11 +28,11 @@ Last update: {{ site.time | date: "%Y/%m/%d" }}
 Doctype:     HTML5
 Language:    English
 Standards:   HTML5, CSS3
-Components:  Modernizr, Normalize.css, jQuery, etc.
+Components:  Modernizr, Normalize.css, jQuery, Bourbon, Neat
 Software:    VIM, Atom
 
 
 /* THANKS */
 
-Designer: Josh Boyd
+Name:    Josh Boyd
 Twitter: @joshadamboyd
