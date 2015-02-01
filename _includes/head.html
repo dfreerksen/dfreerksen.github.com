@@ -8,74 +8,25 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
 
-  <link rel="author" href="{{ "/humans.txt" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="author" href="{{ "/humans.txt" | prepend: site.baseurl | prepend: site.baseurl }}">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:site" content="@{{ site.social.twitter }}">
-  <meta name="twitter:creator" content="@{{ site.social.twitter }}">
-  <meta name="twitter:image:src" content="{{ "/assets/images/twitter-social.png" | prepend: site.url }}">
-  <meta name="twitter:image:width" content="453">
-  <meta name="twitter:image:height" content="453">
+  {% include head/twitter.html %}
 
-  <!-- Facebook -->
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" >
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:image" content="{{ "/assets/images/facebook-social.png" | prepend: site.url }}">
-  <meta property="article:author" content="https://www.facebook.com/{{ site.social.facebook }}">
+  {% include head/facebook.html %}
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
+  {% include head/favicons.html %}
 
-  <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" href="{{ "/assets/images/apple-touch-icon.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/images/apple-touch-icon-57x57.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/images/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/images/apple-touch-icon-114x114.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/images/apple-touch-icon-144x144.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/images/apple-touch-icon-60x60.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/images/apple-touch-icon-120x120.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/images/apple-touch-icon-76x76.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/images/apple-touch-icon-152x152.png" | prepend: site.baseurl }}">
+  {% include head/robots.html %}
 
-  <!-- Windows -->
-  <meta name="application-name" content="{{ site.name }}" />
-  <meta name="application-TileColor" content="#e3fffa" />
-  <meta name="application-TileImage" content="{{ "/assets/icons/msapplication.png" | prepend: site.baseurl }}">
-  
-  <!-- IE 11 -->
-  <meta name="msapplication-square70x70logo" content="{{ "/assets/icons/smalltile.png" | prepend: site.baseurl }}">
-  <meta name="msapplication-square150x150logo" content="{{ "/assets/icons/mediumtile.png" | prepend: site.baseurl }}">
-  <meta name="msapplication-wide310x150logo" content="{{ "/assets/icons/widetile.png" | prepend: site.baseurl }}">
-  <meta name="msapplication-square310x310logo" content="{{ "/assets/icons/largetile.png" | prepend: site.baseurl }}">
-
-  <!-- Robots -->
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="archive">
-
-  <!-- Verification -->
-  <meta name="google-site-verification" content="{{ site.verification.google }}">
-  <meta name="msvalidate.01" content="{{ site.verification.msvalidate }}">
+  {% include head/verification.html %}
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ "/assets/stylesheets/site.css" | prepend: site.baseurl }}">
 
-  <!-- Feed -->
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  {% include head/feeds.html %}
 
-  <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', '{{ site.analytics.google }}', 'auto');
-    ga('send', 'pageview');
-  </script>
+  {% include head/google_analytics.html %}
 </head>
