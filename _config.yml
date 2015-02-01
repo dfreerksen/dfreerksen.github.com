@@ -28,7 +28,7 @@ social:
   instagram: dfreerksen
 
 # Disqus comments
-disqus: witheringtree
+disqus: davidfreerksen
 
 # Analytics
 analytics:
@@ -51,11 +51,13 @@ defaults:
       type: posts
     values:
       layout: post
+      comments: true
   -
     scope:
       type: pages
     values:
       layout: page
+      comments: false
 
 # CSS compression
 sass:
