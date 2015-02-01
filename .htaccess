@@ -1,0 +1,121 @@
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    BrowserMatch MSIE ie
+    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+  </IfModule>
+</IfModule>
+
+
+# Favicon
+AddType image/x-icon            ico
+
+
+# Proper svg serving for svg webfonts on iPad
+AddType image/svg+xml           svg svgz
+AddEncoding gzip                svgz
+
+
+# Webfont formats
+AddType application/vnd.ms-fontobject eot
+AddType font/ttf                      ttf
+AddType font/otf                      otf
+AddType font/x-woff                   woff
+
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  # Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+  <IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s,?\s(gzip|deflate)?|X{4,13}|~{4,13}|-{4,13})$ HAVE_Accept-Encoding
+      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    </IfModule>
+  </IfModule>
+
+  # html, txt, css, js, json, xml, htc:
+  <IfModule filter_module>
+    FilterDeclare   COMPRESS
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type /text/(html|css|javascript|plain|x(ml|-component))/
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type /application/(javascript|json|xml|x-javascript)/
+    FilterChain     COMPRESS
+    FilterProtocol  COMPRESS  change=yes;byteranges=no
+  </IfModule>
+
+  <IfModule !mod_filter.c>
+    # Legacy versions of Apache
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+  </IfModule>
+
+  # webfonts and svg:
+  <FilesMatch "\.(ttf|otf|eot|svg)$" >
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>
+
+
+# Far-Future Expires Headers (UNCOMMENT WHEN YOU GO LIVE)
+<IfModule mod_expires.c>
+#  Header set cache-control: public
+#  Header append Vary User-Agent
+#  ExpiresActive on
+#
+#  # General whitelist expires rules
+#  ExpiresDefault                          "access plus 1 month"
+#
+#  # cache.manifest needs re-reqeusts in FF 3.6
+#  ExpiresByType text/cache-manifest       "access plus 0 seconds"
+#
+#  # Document HTML
+#  ExpiresByType text/html                 "access plus 0 seconds"
+#
+#  # RSS feed
+#  ExpiresByType application/rss+xml       "access plus 1 hour"
+#
+#  # Favicon (cannot be renamed)
+#  ExpiresByType image/vnd.microsoft.icon  "access plus 1 week"
+#
+#  # Media: images, video, audio
+#  ExpiresByType image/png                 "access plus 1 month"
+#  ExpiresByType image/jpg                 "access plus 1 month"
+#  ExpiresByType image/jpeg                "access plus 1 month"
+#  ExpiresByType video/ogg                 "access plus 1 month"
+#  ExpiresByType audio/ogg                 "access plus 1 month"
+#  ExpiresByType video/mp4                 "access plus 1 month"
+#
+#  # Webfonts
+#  ExpiresByType font/ttf                  "access plus 1 month"
+#  ExpiresByType font/woff                 "access plus 1 month"
+#  ExpiresByType image/svg+xml             "access plus 1 month"
+#
+#  # CSS and Javascript
+#  ExpiresByType text/css                  "access plus 1 week"
+#  ExpiresByType application/javascript    "access plus 1 week"
+#  ExpiresByType text/javascript           "access plus 1 week"
+</IfModule>
+
+
+# Entity tags (ETags) aren't needed for static content
+FileETag None
+
+
+# UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+
+# Force UTF-8 for certain file formats
+AddCharset utf-8 .html .css .js .xml .json .rss
+
+RewriteEngine On
+# RewriteBase /
+
+
+# Block users from browsing folders
+Options -Indexes
+
+
+# Remove the www
+# RewriteCond %{HTTP_HOST} ^www.davidfreerksen.com$ [NC]
+# RewriteRule ^(.*)$ http://davidfreerksen.com/$1 [R=301,L]

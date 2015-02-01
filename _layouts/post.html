@@ -2,6 +2,10 @@
 layout: default
 ---
 <div class="post">
+  <div id="pagination-top" class="pagination">
+    {% include posts/prev_next.html %}
+  </div>
+
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
@@ -10,6 +14,14 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+
+  <div id="pagination-bottom" class="pagination">
+    {% include posts/prev_next.html %}
+  </div>
+
+  {% if page.sharing %}
+    {% include posts/share.html %}
+  {% endif %}
 
   {% if page.comments %}
     {% include posts/comments.html %}

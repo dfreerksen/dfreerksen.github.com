@@ -52,12 +52,12 @@ defaults:
     values:
       layout: post
       comments: true
+      sharing: true
   -
     scope:
       type: pages
     values:
       layout: page
-      comments: false
 
 # CSS compression
 sass:
@@ -65,6 +65,10 @@ sass:
 
 # Timezone
 timezone: America/Los_Angeles
+
+# Include in build
+include:
+  - .htaccess
 
 # Exclude in build
 exclude:
