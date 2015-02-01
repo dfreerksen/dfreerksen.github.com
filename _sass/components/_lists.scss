@@ -1,0 +1,59 @@
+/*-- Lists (UL and OL) -------------------------------------------------------*/
+
+ul,
+ol {
+  position: relative;
+
+  a {
+    display: block;
+  }
+}
+
+ul {
+  margin-left: $gap;
+  padding-left: 0px;
+
+  ul {
+    list-style-type: circle;
+    margin-bottom: auto;
+
+    ul {
+      list-style-type: square;
+    }
+  }
+}
+
+ol {
+  margin-left: 0px;
+  padding-left: $gap;
+
+  ol {
+    list-style-type: lower-latin;
+    margin-bottom: auto;
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+/*-- Definition List ---------------------------------------------------------*/
+
+dl {
+  margin: $gap 0;
+}
+
+dt { }
+
+dd {
+  margin-bottom: $gap / 2;
+  background: none no-repeat left top;
+}

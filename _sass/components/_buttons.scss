@@ -1,0 +1,51 @@
+/*-- Buttons -----------------------------------------------------------------*/
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @include inline-block;
+  @include border-radius($button-border-radius);
+  border: $button-border-size $button-border-type $button-border-color;
+  box-shadow: inset $button-shadow-x $button-shadow-y $button-shadow-blur $button-shadow-spread $button-shadow-color;
+  color: $button-text-color;
+  font-size: inherit;
+  font-weight: normal;
+  @include linear-gradient(to top, $button-background-color, lighten($button-background-color, 5%));
+  padding: $button-padding;
+  text-decoration: none;
+  background-clip: padding-box;
+
+  &:hover:not(:disabled) {
+    @include linear-gradient(to top, lighten($button-background-color, 5%), $button-background-color);
+    box-shadow: inset $button-hover-shadow-x $button-hover-shadow-y $button-hover-shadow-blur $button-hover-shadow-spread $button-hover-shadow-color;
+    cursor: pointer;
+  }
+
+  &:focus:not(:disabled) {
+    box-shadow: inset $button-focus-shadow-x $button-focus-shadow-y $button-focus-shadow-blur $button-focus-shadow-spread $button-focus-shadow-color;
+  }
+
+  &[disabled] {
+    @include opacity($button-disabled-opacity);
+    color: $button-disabled-color;
+    cursor: not-allowed;
+  }
+
+  &.pill {
+    @include border-radius($button-pill-border-radius);
+  }
+
+  &.shiny {
+    @include linear-gradient($button-shiny-darken 0%, $button-background-color 49%, $button-background-color 51%, $button-shiny-lighten 100%);
+
+    &:hover:not(:disabled) {
+      @include linear-gradient($button-shiny-darken 0%, $button-background-color 49%, $button-background-color 51%, $button-shiny-lighten 100%);
+    }
+
+    &:focus:not(:disabled) {
+      @include linear-gradient($button-shiny-lighten 0%, $button-background-color 49%, $button-background-color 51%, $button-shiny-darken 100%);
+    }
+  }
+}

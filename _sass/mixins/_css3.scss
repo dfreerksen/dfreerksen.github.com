@@ -1,0 +1,69 @@
+/*-- inline-block ------------------------------------------------------------*/
+
+@mixin inline-block($alignment: none) {
+  display: -moz-inline-stack;
+  display: inline-block;
+  @if $alignment and $alignment != none {
+    vertical-align: $alignment;
+  }
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+
+/*-- text-shadow -------------------------------------------------------------*/
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+  text-shadow: $x $y $blur $color;
+}
+
+/*-- opacity -----------------------------------------------------------------*/
+
+@mixin opacity($decimal){
+  $percent: $decimal * 100;
+  @include prefixer(opacity, $decimal, webkit moz spec);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$percent+")";
+  filter: alpha(opacity=$percent);
+}
+
+
+/*-- box-shadow - Deprecated from Bourbon ------------------------------------*/
+
+@mixin box-shadow($shadows...) {
+  @include prefixer(box-shadow, $shadows, spec);
+}
+
+
+/*-- background-size - Deprecated from Bourbon -------------------------------*/
+
+@mixin background-size($lengths...) {
+  @include prefixer(background-size, $lengths, spec);
+}
+
+
+/*-- border-radius - Deprecated from Bourbon ---------------------------------*/
+
+@mixin border-radius($radii) {
+  @include prefixer(border-radius, $radii, spec);
+}
+
+@mixin border-top-radius($radii) {
+  @include prefixer(border-top-left-radius, $radii, spec);
+  @include prefixer(border-top-right-radius, $radii, spec);
+}
+
+@mixin border-bottom-radius($radii) {
+  @include prefixer(border-bottom-left-radius, $radii, spec);
+  @include prefixer(border-bottom-right-radius, $radii, spec);
+}
+
+@mixin border-left-radius($radii) {
+  @include prefixer(border-top-left-radius, $radii, spec);
+  @include prefixer(border-bottom-left-radius, $radii, spec);
+}
+
+@mixin border-right-radius($radii) {
+  @include prefixer(border-top-right-radius, $radii, spec);
+  @include prefixer(border-bottom-right-radius, $radii, spec);
+}

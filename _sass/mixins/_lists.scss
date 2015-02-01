@@ -1,0 +1,40 @@
+/*-- Lists -------------------------------------------------------------------*/
+
+@mixin horizontal-menu($zindex: 999) {
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: block;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    display: none;
+    z-index: $zindex;
+    position: absolute;
+    left: 0px;
+
+    ul {
+      left: 100%;
+      top: 0px;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    position: relative;
+
+    &:hover {
+      > ul {
+        display: block;
+      }
+    }
+  }
+
+  > li {
+    @include inline-block;
+  }
+}

@@ -1,0 +1,74 @@
+/*-- Typography --------------------------------------------------------------*/
+
+p {
+  line-height: inherit;
+}
+
+acronym {
+  cursor: help;
+  border-bottom: 1px dashed blue;
+}
+
+kbd {
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 90%;
+  padding: 1px 4px;
+}
+
+var {
+  margin: 0;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  @include border-radius(3px);
+  padding: 0 4px 0 0;
+
+  &:before,
+  &:after {
+    content: '`';
+  }
+}
+
+u,
+ins { }
+
+i,
+em,
+cite,
+dfn { }
+
+address {
+  font-style: normal;
+
+  > strong {
+    display: block;
+  }
+}
+
+b,
+strong { }
+
+s,
+del { }
+
+small,
+.small {
+  font-size: 65%;
+}
+
+sup { }
+
+sub { }
+
+abbr { }
+
+mark {
+  @include border-radius(3px);
+  background: #ffd544;
+  padding: 0 3px;
+}
+
+details { }
+
+summary { }

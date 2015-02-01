@@ -1,0 +1,19 @@
+/*-- Placeholder -------------------------------------------------------------*/
+
+@mixin placeholder($element: false) {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input" !global;
+
+  @if ($element) {
+    @each $placeholder in $placeholders {
+      &:#{$placeholder}-placeholder {
+        @content;
+      }
+    }
+  } @else {
+    @each $placeholder in $placeholders {
+      :#{$placeholder}-placeholder {
+        @content;
+      }
+    }
+  }
+}

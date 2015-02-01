@@ -1,21 +1,232 @@
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+/*-- Media Query Widths ------------------------------------------------------*/
 
-$spacing-unit:     30px;
+// $width-320:  320px;
+// $width-420:  420px;
+// $width-640:  640px;
+// $width-800:  800px;
+// $width-960:  960px;
+// $width-1024: 1024px;
+// $width-1280: 1280px;
 
-$text-color:       #111;
+
+/*-- Neat --------------------------------------------------------------------*/
+
+$border-box-sizing: true;
+
+$column: 74px;
+$gutter: 12px;
+$grid-columns: 12;
+
+$max-width: 1280px;
+
+// $tablet: new-breakpoint(max-width 768px 8);
+// $mobile: new-breakpoint(max-width 480px 4);
+
+
+/*-- Visual Grid -------------------------------------------------------------*/
+
+$visual-grid: true;
+$visual-grid-color: #eee;
+$visual-grid-index: back;
+$visual-grid-opacity: 0.4;
+
+
+/*-- Misc --------------------------------------------------------------------*/
+
+$gap: $gutter * 2;
+
+
+/*-- Wrapper -----------------------------------------------------------------*/
+
+$wrapper-min-width: 320px;
+$wrapper-max-width: $max-width;
+
+$wrapper-margin: 0 auto;
+
+
+/*-- Body Variables ----------------------------------------------------------*/
+
+$font-size: 16px;
+$font-family: Helvetica, Arial, sans-serif;
+$font-weight: 300;
+$text-color: #111111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$line-height: 1.5;
 
+
+/*-- Links -------------------------------------------------------------------*/
+
+$link-transition: all .3s;
+
+$link-color: #2a7ae2;
+$link-decoration: none;
+
+$link-hover-color: #111111;
+$link-hover-decoration: none;
+
+
+/*-- Selection ---------------------------------------------------------------*/
+
+$selection-text-color: #000000;
+$selection-background-color: #ff7318;
+
+$selection-image-text-color: $selection-text-color;
+$selection-image-background-color: $selection-background-color;
+
+
+/*-- Borders -----------------------------------------------------------------*/
+
+$border-width: 1px;
+$border-type: solid;
+$border-color: #cbcbcb;
+
+$border-style: $border-width $border-type $border-color;
+
+
+/*-- Tables ------------------------------------------------------------------*/
+
+$table-border-type: $border-type;
+$table-border-width: $border-width;
+$table-border-color: $border-color;
+
+$table-text-color: #000000;
+
+$table-caption-background-color: transparent;
+
+$table-title-background-color: #e0e0e0;
+
+$table-row-background-color-even: transparent;
+$table-row-background-color-odd: #f2f2f2;
+
+
+/*-- Forms -------------------------------------------------------------------*/
+
+$form-fieldset-border-radius: 4px;
+$form-fieldset-border-width: $border-width;
+$form-fieldset-border-type: $border-type;
+$form-fieldset-border-color: $border-color;
+
+$form-input-transition: $link-transition;
+
+$form-input-radius: 3px;
+$form-input-padding: 3px;
+$form-input-border: $border-type $border-width $border-color;
+$form-input-text-color: #666;
+$form-input-background-color: #ffffff;
+
+$form-hover-input-border: $border-type $border-width darken($border-color, 25%);
+$form-hover-input-text-color: $form-input-text-color;
+$form-hover-input-background-color: $form-input-background-color;
+
+$form-focus-input-border: $border-type $border-width #000;
+$form-focus-input-text-color: $form-input-text-color;
+$form-focus-input-background-color: darken($form-input-background-color, 2%);
+
+$disabled-color: #999;
+$disabled-opacity: 0.75;
+
+
+/*-- Placeholder -------------------------------------------------------------*/
+
+$placeholder-color: $disabled-color;
+
+
+/*-- Buttons -----------------------------------------------------------------*/
+
+$button-background-color: #4294f0;
+$button-text-color: #fff;
+
+$button-disabled-opacity: 0.5;
+$button-disabled-color: $button-text-color;
+
+$button-border-radius: 5px;
+$button-border-size: 1px;
+$button-border-type: solid;
+$button-border-color: darken($button-background-color, 30%);
+
+$button-padding: 4px 12px;
+
+$button-shadow-x: 1px;
+$button-shadow-y: 1px;
+$button-shadow-blur: 0;
+$button-shadow-spread: 0;
+$button-shadow-color: lighten($button-background-color, 10%);
+
+$button-text-shadow-x: 0;
+$button-text-shadow-y: 1px;
+$button-text-shadow-blur: 0;
+$button-text-shadow-color: rgba($button-text-color, 0.2);
+
+$button-hover-shadow-x: $button-shadow-x;
+$button-hover-shadow-y: $button-shadow-y;
+$button-hover-shadow-blur: $button-shadow-blur;
+$button-hover-shadow-spread: $button-shadow-spread;
+$button-hover-shadow-color: $button-shadow-color;
+
+$button-hover-text-shadow-x: $button-text-shadow-x;
+$button-hover-text-shadow-y: $button-text-shadow-y;
+$button-hover-text-shadow-blur: $button-text-shadow-blur;
+$button-hover-text-shadow-color: rgba(darken($button-text-color, 100%), 0.3);
+
+$button-focus-shadow-x: -$button-hover-shadow-x;
+$button-focus-shadow-y: -$button-hover-shadow-y;
+$button-focus-shadow-blur: $button-hover-shadow-blur;
+$button-focus-shadow-spread: $button-hover-shadow-spread;
+$button-focus-shadow-color: darken($button-background-color, 10%);
+
+$button-focus-text-shadow-x: $button-hover-text-shadow-x;
+$button-focus-text-shadow-y: $button-hover-text-shadow-y;
+$button-focus-text-shadow-blur: $button-hover-text-shadow-blur;
+$button-focus-text-shadow-color: $button-hover-text-shadow-color;
+
+$button-pill-border-radius: 14px;
+
+$button-shiny-darken: darken($button-background-color, 40%);
+$button-shiny-lighten: lighten($button-background-color, 20%);
+
+
+/*-- Blockquotes -------------------------------------------------------------*/
+
+$blockquote-text-color: #828282;
+$blockquote-background-color: #f9f9f9;
+
+$blockquote-border-width: 10px;
+$blockquote-border-type: $border-type;
+$blockquote-border-color: $border-color;
+
+$blockquote-quote-color: #777777;
+$blockquote-quote-size: 70px;
+
+$blockquote-cite-color: #555555;
+$blockquote-cite-size: 12px;
+
+
+/*-- Mobile Icon -------------------------------------------------------------*/
+
+// $mobile-icon-bar-width: 24px;
+// $mobile-icon-bar-height: 4px;
+
+// $mobile-icon-bar-spacing: 7px;
+
+// $mobile-icon-duration: .5s;
+// $mobile-icon-color: #000000;
+// $mobile-icon-toggled-size: 1;
+
+
+
+
+/*-- Below this line will die out when the design is ready -------------------*/
+
+// Our variables
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    $max-width;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}

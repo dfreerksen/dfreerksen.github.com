@@ -1,0 +1,7 @@
+/*-- Selection ---------------------------------------------------------------*/
+
+@include selection($selection-background-color, $selection-text-color);
+
+img {
+  @include selection($selection-image-background-color, $selection-image-text-color, true);
+}
