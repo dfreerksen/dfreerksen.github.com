@@ -24,7 +24,7 @@ Location:  Plano, TX
 
 /* SITE */
 
-Last update: {{ site.time | date: "%Y/%m/%d" }}
+Last update: {{ site.time | date_to_rfc822 }}
 Doctype:     HTML5
 Language:    English
 Standards:   HTML5, CSS3
