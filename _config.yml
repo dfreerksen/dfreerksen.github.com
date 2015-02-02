@@ -62,6 +62,7 @@ defaults:
 
 # CSS compression
 sass:
+  # style: :expanded
   style: :compressed
 
 # Timezone
