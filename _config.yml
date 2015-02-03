@@ -54,6 +54,7 @@ defaults:
       layout: post
       comments: true
       sharing: true
+      excerpt_separator: <!--more-->
   -
     scope:
       type: pages
