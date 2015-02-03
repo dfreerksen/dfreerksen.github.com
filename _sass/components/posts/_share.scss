@@ -1,0 +1,9 @@
+ul.share {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    @include inline-block;
+  }
+}
