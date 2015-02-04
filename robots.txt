@@ -1,4 +1,9 @@
+---
+layout: null
+---
 User-Agent: *
 Disallow:
 Disallow: /contact/success/
 Disallow: /contact/success/index.html
+
+Sitemap: {{ "/sitemap.xml" | prepend: site.url }}

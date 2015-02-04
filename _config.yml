@@ -66,6 +66,10 @@ sass:
   # style: :expanded
   style: :compressed
 
+# Plugins
+gems:
+  - jekyll-sitemap
+
 # Timezone
 timezone: America/Los_Angeles
 
