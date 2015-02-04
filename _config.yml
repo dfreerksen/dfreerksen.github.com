@@ -51,6 +51,7 @@ defaults:
     scope:
       type: posts
     values:
+      type: post
       layout: post
       comments: true
       sharing: true
@@ -59,6 +60,7 @@ defaults:
     scope:
       type: pages
     values:
+      type: page
       layout: page
 
 # CSS compression
