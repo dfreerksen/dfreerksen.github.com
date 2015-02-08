@@ -55,6 +55,13 @@
             </a>
           </li>
           {% endif %}
+
+          <li>
+            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+              <i class="fa fa-rss"></i>
+              <span class="username">Subscribe to my feed</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -64,7 +71,7 @@
     </div>
 
     <div class="copyright">
-      &copy; {{ site.time | date: '%Y' }} David Freerksen | Design by <a href="http://www.joshadamboyd.com/">JoshAdamBoyd</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">Github</a>, and magic.
+      &copy; {{ site.time | date: '%Y' }} David Freerksen | <a href="{{ "/sitemap.xml" | prepend: site.baseurl }}">Sitemap</a> | Design by <a href="http://www.joshadamboyd.com/">JoshAdamBoyd</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">Github</a>, and magic.
     </div>
   </div>
 </footer>
