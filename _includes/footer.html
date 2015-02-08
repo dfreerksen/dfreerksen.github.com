@@ -13,7 +13,7 @@
         <ul class="social-media-list">
           {% if site.social.twitter %}
           <li>
-            <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank">
+            <a href="https://twitter.com/{{ site.social.twitter }}">
               <i class="fa fa-twitter"></i>
               <span class="username">Follow me on Twitter</span>
             </a>
@@ -22,7 +22,7 @@
 
           {% if site.social.facebook %}
           <li>
-            <a href="https://facebook.com/{{ site.social.facebook }}" target="_blank">
+            <a href="https://facebook.com/{{ site.social.facebook }}">
               <i class="fa fa-facebook-official"></i>
               <span class="username">Like me on Facebook</span>
             </a>
@@ -31,7 +31,7 @@
 
           {% if site.social.instagram %}
           <li>
-            <a href="http://instagram.com/{{ site.social.instagram }}" target="_blank">
+            <a href="http://instagram.com/{{ site.social.instagram }}">
               <i class="fa fa-instagram"></i>
               <span class="username">Like me on Instagram</span>
             </a>
@@ -40,7 +40,7 @@
 
           {% if site.social.github %}
           <li>
-            <a href="https://github.com/{{ site.social.github }}" target="_blank">
+            <a href="https://github.com/{{ site.social.github }}">
               <i class="fa fa-github"></i>
               <span class="username">Fork me on Github</span>
             </a>
@@ -49,7 +49,7 @@
 
           {% if site.social.linkedin %}
           <li>
-            <a href="https://www.linkedin.com/pub/{{ site.social.linkedin }}/" target="_blank">
+            <a href="https://www.linkedin.com/pub/{{ site.social.linkedin }}/">
               <i class="fa fa-linkedin"></i>
               <span class="username">Connect on Linkedin</span>
             </a>
@@ -61,6 +61,10 @@
       <div class="footer-col  footer-col-3">
         <p class="text">{{ site.description }}</p>
       </div>
+    </div>
+
+    <div class="copyright">
+      &copy; {{ site.time | date: '%Y' }} David Freerksen | Design by <a href="http://www.joshadamboyd.com/">JoshAdamBoyd</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">Github</a>, and magic.
     </div>
   </div>
 </footer>
