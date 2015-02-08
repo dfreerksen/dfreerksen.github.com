@@ -53,6 +53,7 @@ defaults:
     values:
       type: post
       layout: post
+      article: true
       comments: true
       sharing: true
       excerpt_separator: <!--more-->
@@ -62,6 +63,7 @@ defaults:
     values:
       type: page
       layout: page
+      article: false
 
 # CSS compression
 sass:
