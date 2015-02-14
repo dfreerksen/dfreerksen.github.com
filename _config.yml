@@ -88,4 +88,4 @@ exclude:
   - TODO.md
 
 # Markdown
-markdown: kramdown
+markdown: redcarpet

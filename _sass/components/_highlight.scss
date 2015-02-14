@@ -5,11 +5,14 @@
   color: #000000;
 
   pre {
-    margin: 5px 0 20px;
+    margin: 5px;
     overflow-x: auto;
+    word-wrap: normal;
   }
 
-  code { }
+  code {
+    white-space: pre;
+  }
 
   .lineno { color: #000000; display: none; } /* Line numbers */
   .hll { background-color: #ffffcc }
