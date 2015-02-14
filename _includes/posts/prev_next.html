@@ -1,13 +1,17 @@
 <div class="post-navigation">
   <div class="left">
     {% if page.previous.url %}
-      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}} ({{page.next.date | date: '%b %-d, %Y'}})">&laquo; {{page.previous.title}}</a>
+      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}} ({{page.next.date | date: '%b %-d, %Y'}})">
+        <i class="fa fa-chevron-left"></i>
+      </a>
     {% endif %}
   </div>
 
   <div class="right">
     {% if page.next.url %}
-      <a href="{{page.next.url}}" title="Next Post: {{page.next.title}} ({{page.next.date | date: '%b %-d, %Y'}})">{{page.next.title}} &raquo;</a>
+      <a href="{{page.next.url}}" title="Next Post: {{page.next.title}} ({{page.next.date | date: '%b %-d, %Y'}})">
+        <i class="fa fa-chevron-right"></i>
+      </a>
     {% endif %}
   </div>
 </div>

@@ -42,7 +42,7 @@ verification:
 # Pagination
 paginate: 10
 permalink: /posts/:year/:month/:day/:title/
-paginate_path: /posts/page/:num
+paginate_path: /page/:num
 
 # Default layouts
 defaults:
