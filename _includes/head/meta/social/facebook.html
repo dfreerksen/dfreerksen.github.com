@@ -1,7 +1,7 @@
 <!-- Facebook -->
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" >
-<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <meta property="og:type" content="{% if page.article %}article{% else %}website{% endif %}">
 <meta property="og:image" content="{{ "/assets/icons/social/facebook.jpg" | prepend: site.url }}">
 <meta property="article:author" content="https://www.facebook.com/{{ site.social.facebook }}">
