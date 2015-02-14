@@ -1,3 +1,6 @@
+---
+layout: null
+---
 # Force the latest IE version, in various cases when it may fall back to IE7 mode
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
@@ -117,5 +120,5 @@ Options -Indexes
 
 
 # Remove the www
-# RewriteCond %{HTTP_HOST} ^www.davidfreerksen.com$ [NC]
-# RewriteRule ^(.*)$ http://davidfreerksen.com/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^{{ site.url | replace_first:'http://','' }}$ [NC]
+# RewriteRule ^(.*)$ {{ site.url }}/$1 [R=301,L]
