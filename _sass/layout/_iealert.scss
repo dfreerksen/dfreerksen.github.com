@@ -1,0 +1,23 @@
+/*-- Old IE Alert ------------------------------------------------------------*/
+
+#iealert {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      @include inline-block;
+
+      &.firefox { }
+
+      &.safari { }
+
+      &.chrome { }
+
+      &.opera { }
+
+      &.ie { }
+    }
+  }
+}

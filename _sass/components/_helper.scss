@@ -164,11 +164,13 @@ img.full {
   text-transform: lowercase;
 }
 
-.cursor-pointer {
+.cursor-pointer,
+.pointer {
   cursor: pointer;
 }
 
-.cursor-help {
+.cursor-help,
+.help {
   cursor: help;
 }
 
