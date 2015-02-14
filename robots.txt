@@ -3,7 +3,7 @@ layout: null
 ---
 User-Agent: *
 Disallow:
-Disallow: /contact/success/
-Disallow: /contact/success/index.html
+Disallow: {{ "/contact/success/" | prepend: site.baseurl }}
+Disallow: {{ "/contact/success/index.html" | prepend: site.baseurl }}
 
 Sitemap: {{ "/sitemap.xml" | prepend: site.url }}
