@@ -12,20 +12,24 @@
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
-  {% include head/twitter.html %}
+  {% include head/meta/social/twitter.html %}
 
-  {% include head/facebook.html %}
+  {% include head/meta/social/facebook.html %}
 
-  {% include head/favicons.html %}
+  {% include head/meta/icons/favicon.html %}
 
-  {% include head/robots.html %}
+  {% include head/meta/icons/apple.html %}
 
-  {% include head/verification.html %}
+  {% include head/meta/icons/windows.html %}
+
+  {% include head/meta/robots.html %}
+
+  {% include head/meta/verification.html %}
+
+  {% include head/meta/feeds.html %}
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ "/assets/stylesheets/site.css" | prepend: site.baseurl }}">
 
-  {% include head/feeds.html %}
-
-  {% include head/google_analytics.html %}
+  {% include head/js/google_analytics.html %}
 </head>
