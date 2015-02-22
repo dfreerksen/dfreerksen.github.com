@@ -1,0 +1,6 @@
+{% if "post" == page.type %}
+<!-- Schema.org -->
+<meta itemscope="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta itemscope="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta itemscope="image" content="{{ "/assets/icons/social/schema.jpg" | prepend: site.url }}">
+{% endif %}
