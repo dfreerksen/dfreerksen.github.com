@@ -28,7 +28,7 @@ input[type="submit"] {
   }
 
   &[disabled] {
-    @include opacity($button-disabled-opacity);
+    opacity: $button-disabled-opacity;
     color: $button-disabled-color;
     cursor: not-allowed;
   }

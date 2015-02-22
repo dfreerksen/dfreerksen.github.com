@@ -1,4 +1,4 @@
-/*-- inline-block ------------------------------------------------------------*/
+/*-- inline-block - Deprecated from Bourbon ----------------------------------*/
 
 @mixin inline-block($alignment: none) {
   display: -moz-inline-stack;
@@ -9,22 +9,6 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-}
-
-
-/*-- text-shadow -------------------------------------------------------------*/
-
-@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
-  text-shadow: $x $y $blur $color;
-}
-
-/*-- opacity -----------------------------------------------------------------*/
-
-@mixin opacity($decimal){
-  $percent: $decimal * 100;
-  @include prefixer(opacity, $decimal, webkit moz spec);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$percent+")";
-  filter: alpha(opacity=$percent);
 }
 
 

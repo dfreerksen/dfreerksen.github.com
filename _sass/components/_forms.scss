@@ -49,7 +49,7 @@ input[type="range"],
   color: $form-input-text-color;
   display: block;
   width: 100%;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 
   &:hover:not(:disabled) {
     border: $form-hover-input-border;
@@ -86,7 +86,7 @@ input[type="color"] {
 
 [disabled],
 [readonly] {
-  @include opacity($disabled-opacity);
+  opacity: $disabled-opacity;
   color: $disabled-color;
 }
 
