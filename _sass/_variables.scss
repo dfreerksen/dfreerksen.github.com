@@ -1,5 +1,8 @@
 /*-- Media Query Widths ------------------------------------------------------*/
 
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
 // $width-320:  320px;
 // $width-420:  420px;
 // $width-640:  640px;
@@ -11,6 +14,8 @@
 
 /*-- Neat --------------------------------------------------------------------*/
 
+$disable-warnings: true !default;
+
 $border-box-sizing: true;
 
 $column: 74px;
@@ -19,13 +24,10 @@ $grid-columns: 12;
 
 $max-width: 1280px;
 
-// $tablet: new-breakpoint(max-width 768px 8);
-// $mobile: new-breakpoint(max-width 480px 4);
-
 
 /*-- Visual Grid -------------------------------------------------------------*/
 
-$visual-grid: true;
+$visual-grid: false;
 $visual-grid-color: #eee;
 $visual-grid-index: back;
 $visual-grid-opacity: 0.4;

@@ -13,7 +13,7 @@
 
       <div class="trigger">
         {% for link in site.data.navigation %}
-        <a class="page-link" href="{{ link.href }}"{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
+        <a class="page-link" href="{{ link.href | prepend:site.baseurl }}"{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
         {% endfor %}
       </div>
     </nav>
