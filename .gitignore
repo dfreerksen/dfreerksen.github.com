@@ -4,3 +4,6 @@ _site
 /bower_components
 /node_modules
 npm-debug.log
+
+# Ignored from build system
+_javascript/site.js

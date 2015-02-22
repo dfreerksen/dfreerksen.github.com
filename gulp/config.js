@@ -5,8 +5,9 @@ module.exports = {
   assets: {
     base:        './',
     bower:       './bower_components',
+    coffee:      './_coffee',
+    javascript:  './_javascript',
     sass:        './_sass',
-    source:      './_assets',
     destination: './assets'
   },
   localRootUrl: null,

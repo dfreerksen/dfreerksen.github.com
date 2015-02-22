@@ -5,7 +5,7 @@ var config       = require('../../config'),
     handleErrors = require('../../util/handleErrors');
 
 module.exports = {
-  src:  config.assets.base + 'bower_components/bourbon/app/assets/stylesheets/**/*.scss',
+  src:  config.assets.bower + '/bourbon/app/assets/stylesheets/**/*.scss',
   dest: config.assets.sass + '/bourbon'
 };
 

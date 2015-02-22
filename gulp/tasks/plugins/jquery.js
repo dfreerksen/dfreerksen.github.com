@@ -5,11 +5,11 @@ var config       = require('../../config'),
     handleErrors = require('../../util/handleErrors');
 
 module.exports = {
-  src:  config.assets.bower + '/fontawesome/fonts/**/*.{eot,otf,svg,ttf,woff,woff2}',
-  dest: config.assets.destination + '/fonts/fontawesome'
+  src:  config.assets.bower + '/jquery/dist/jquery.min.js',
+  dest: config.assets.javascript + '/jquery'
 };
 
-gulp.task('fontawesome', function() {
+gulp.task('jquery', function() {
   var source      = module.exports.src,
       destination = module.exports.dest;
 

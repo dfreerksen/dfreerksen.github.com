@@ -92,8 +92,9 @@ exclude:
   - /bower_components
   - gulpfile.js
   - /gulp
-  - /npm_modules
+  - /node_modules
   - package.json
+  - npm-debug.log
 
 # Markdown
 markdown: redcarpet

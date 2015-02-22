@@ -5,7 +5,7 @@ var config       = require('../../config'),
     handleErrors = require('../../util/handleErrors');
 
 module.exports = {
-  src:  config.assets.base + 'bower_components/sass-mediaqueries/_media-queries.scss',
+  src:  config.assets.bower + '/sass-mediaqueries/_media-queries.scss',
   dest: config.assets.sass + '/plugins'
 };
 

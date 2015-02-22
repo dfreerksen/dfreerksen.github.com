@@ -5,7 +5,7 @@ var config       = require('../../config'),
     handleErrors = require('../../util/handleErrors');
 
 module.exports = {
-  src:  config.assets.base + 'bower_components/normalize-scss/_normalize.scss',
+  src:  config.assets.bower + '/normalize-scss/_normalize.scss',
   dest: config.assets.sass + '/plugins'
 };
 
