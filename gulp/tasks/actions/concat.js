@@ -9,7 +9,7 @@ var config       = require('../../config'),
 
 module.exports = {
   src:  [
-    config.assets.javascript + '/jquery/jquery*.{js,map}',
+    config.assets.javascript + '/jquery/jquery.min.js',
     config.assets.javascript + '/site.js'
   ],
   dest: config.assets.destination + '/javascripts',

@@ -5,7 +5,6 @@ module.exports = {
   assets: {
     base:        './',
     bower:       './bower_components',
-    coffee:      './_coffee',
     javascript:  './_javascript',
     sass:        './_sass',
     destination: './assets'

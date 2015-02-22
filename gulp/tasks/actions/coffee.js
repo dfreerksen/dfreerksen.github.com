@@ -10,7 +10,7 @@ var config       = require('../../config'),
     handleErrors = require('../../util/handleErrors');
 
 module.exports = {
-  src:  config.assets.coffee + "/*.coffee",
+  src:  config.assets.javascript + "/**/*.coffee",
   dest: config.assets.javascript
 };
 
