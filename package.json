@@ -1,0 +1,25 @@
+{
+  "name": "david-freerksen",
+  "description": "davidfreerksen.com site",
+  "version": "1.0.0",
+  "authors": [
+    "David Freerksen <dfreerksen@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfreerksen/dfreerksen.github.io.git"
+  },
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=0.10.13",
+    "npm": ">=1.4.21"
+  },
+  "dependencies": {
+    "browser-sync": "^1.3.6",
+    "gulp": "^3.8.7",
+    "gulp-changed": "^1.0.0",
+    "gulp-notify": "^1.5.1",
+    "watchify": "^1.0.2"
+  },
+  "devDependencies": {}
+}

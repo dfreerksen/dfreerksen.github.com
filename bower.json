@@ -1,0 +1,35 @@
+{
+  "name": "david-freerksen",
+  "version": "1.0.0",
+  "description": "davidfreerksen.com site",
+  "homepage": "http://davidfreerksen.com/",
+  "authors": [
+    "David Freerksen <dfreerksen@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfreerksen/dfreerksen.github.io.git"
+  },
+  "keywords": [
+    "there",
+    "are",
+    "many",
+    "keywords"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.0",
+    "fontawesome": "~4.3.0",
+    "jquery": "~1.11.1",
+    "neat": "~1.7.1",
+    "normalize-scss": "~3.0.1",
+    "sass-mediaqueries": "~1.3.1"
+  },
+  "devDependencies": {}
+}
