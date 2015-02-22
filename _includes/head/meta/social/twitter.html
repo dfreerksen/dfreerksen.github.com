@@ -2,7 +2,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}">
 <meta name="twitter:site" content="@{{ site.social.twitter }}">
 <meta name="twitter:creator" content="@{{ site.social.twitter }}">
 <meta name="twitter:image:src" content="{{ "/assets/icons/social/twitter.jpg" | prepend: site.url }}">

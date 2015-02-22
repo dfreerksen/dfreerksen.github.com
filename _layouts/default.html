@@ -1,19 +1,16 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="en"> <![endif]-->
-<!--[if IE 9]><html class="lt-ie10" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
-<html>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}><!--<![endif]-->
 {% include head.html %}
-
 {% assign page_url = page.url | remove_first:"/" | replace:".html","" | split:"/" | join:"-" %}
 {% if "page" == page.type %}
   {% capture body_class %}page page-{{ page_url }}{% if "index" == page_url %} homepage{% endif %}{% endcapture %}
 {% else %}
   {% capture body_class %}post post-{{ page_url }}{% endcapture %}
 {% endif %}
-
 <body class="{{ body_class }}">
 
   {% include iealert.html %}

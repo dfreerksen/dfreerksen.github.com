@@ -44,6 +44,9 @@ paginate: 10
 permalink: /posts/:year/:month/:day/:title/
 paginate_path: /page/:num
 
+# Excerpts
+excerpt_separator: <!--more-->
+
 # Default layouts
 defaults:
   -
@@ -55,7 +58,6 @@ defaults:
       article: true
       comments: true
       sharing: true
-      excerpt_separator: <!--more-->
   -
     scope:
       type: pages
@@ -85,7 +87,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - DESIGN.md
   - HELP.md
   - TODO.md
   - bower.json
