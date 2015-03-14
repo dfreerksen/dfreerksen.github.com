@@ -5,6 +5,7 @@ Gemfile.lock
 /bower_components
 /node_modules
 npm-debug.log
+_drafts/*.md
 
 # Ignored from build system
 _javascript/site.js
