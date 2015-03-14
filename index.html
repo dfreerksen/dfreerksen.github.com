@@ -11,21 +11,29 @@ layout: default
     {% include posts/pagination.html %}
   </div>
 
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  {% if paginator.posts %}
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
 
-        <div class="post-excerpt">
-          {{ post.excerpt | strip_html}}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html}}
+          </div>
+
+          <div class="post-more">
+            <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts found.</p>
+  {% endif %}
 
   <div id="pagination-bottom" class="pagination">
     {% include posts/pagination.html %}

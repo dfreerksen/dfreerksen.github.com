@@ -17,9 +17,12 @@ You can [view my resume][resume].
 
 I am currently not available for freelance work.
 
-![David and Kate][dk]
+![David and Kate][us]
 
-[dk]:     {{ "/assets/images/pages/about/us.jpg" | prepend: site.baseurl }}
+![David and Kate][us2]
+
+[us]:     {{ "/assets/images/pages/about/us.jpg" | prepend: site.baseurl }}
+[us2]:    {{ "/assets/images/pages/about/us2.jpg" | prepend: site.baseurl }}
 [resume]: {{ "/assets/pdf/david.freerksen.pdf" | prepend: site.baseurl }}
 
 [wun]:   http://wonderfulunion.com

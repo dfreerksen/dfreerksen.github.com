@@ -6,10 +6,6 @@ layout: default
     <h1 class="page-heading">Articles by tag: `{{ page.tag }}`</h1>
   </header>
 
-  <div id="pagination-top" class="pagination">
-    {% include posts/pagination.html %}
-  </div>
-
   {% if site.tags[page.tag] %}
     <ul class="post-list">
     {% for post in site.tags[page.tag] %}
@@ -29,8 +25,4 @@ layout: default
   {% else %}
     <p>There are no posts for this tag.</p>
   {% endif %}
-
-  <div id="pagination-bottom" class="pagination">
-    {% include posts/pagination.html %}
-  </div>
 </div>

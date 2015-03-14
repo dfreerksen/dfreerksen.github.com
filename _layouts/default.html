@@ -4,8 +4,10 @@
 {% assign page_url = page.url | remove_first:"/" | replace:".html","" | split:"/" | join:"-" %}
 {% if "page" == page.type %}
   {% capture body_class %}page page-{{ page_url }}{% if "index" == page_url %} homepage{% endif %}{% endcapture %}
+{% elsif "tag" == page.type %}
+  {% capture body_class %}tag {{ page_url }}{% endcapture %}
 {% else %}
-  {% capture body_class %}post post-{{ page_url }}{% endcapture %}
+  {% capture body_class %}post {{ page_url }}{% endcapture %}
 {% endif %}
 <body class="{{ body_class }}">
 
