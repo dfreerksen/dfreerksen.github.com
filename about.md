@@ -19,9 +19,8 @@ I am currently not available for freelance work.
 
 ![David and Kate][dk]
 
-[wun]: http://wonderfulunion.com
-[gctrl]: http://groundctrl.com
-
-[dk]: {{ "/assets/images/pages/about/us.jpg" | prepend: site.baseurl }}
-
+[dk]:     {{ "/assets/images/pages/about/us.jpg" | prepend: site.baseurl }}
 [resume]: {{ "/assets/pdf/david.freerksen.pdf" | prepend: site.baseurl }}
+
+[wun]:   http://wonderfulunion.com
+[gctrl]: http://groundctrl.com

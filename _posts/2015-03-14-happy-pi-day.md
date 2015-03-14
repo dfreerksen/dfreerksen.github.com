@@ -1,6 +1,6 @@
 ---
-title:  Happy Pi Day
-date:   2015-03-14 09:26:53
+title: Happy Pi Day
+date: 2015-03-14 09:26:53
 categories:
 - misc
 tags:

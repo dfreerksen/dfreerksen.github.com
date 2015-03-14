@@ -1,6 +1,6 @@
 ---
-title:  Use the CLI to find monitor serial number
-date:   2015-03-10 00:05:18
+title: Use the CLI to find monitor serial number
+date: 2015-03-10 00:05:18
 categories:
 - mac
 - cli
