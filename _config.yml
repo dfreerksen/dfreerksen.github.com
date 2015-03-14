@@ -5,14 +5,16 @@ description: David Freerksen is a software engineer located in Elk Grove, Calfir
 keywords:
   - david
   - freerksen
-  - witheringtree
+  - davidfreerksen
+  - dfreerksen
   - ruby
   - rails
-  - php
+  - node
+  - javascript
 
 # URLs and paths
 baseurl: ""
-url: "http://www.davidfreerksen.com"
+url: http://www.davidfreerksen.com
 
 # Version
 version: 1.1.2 # format: major.update.fix
@@ -49,6 +51,12 @@ paginate_path: /page/:num
 
 # Default layouts
 defaults:
+  -
+    scope:
+      path: tag
+    values:
+      type: tag
+      layout: tag
   -
     scope:
       type: posts
