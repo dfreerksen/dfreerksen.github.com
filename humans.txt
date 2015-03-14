@@ -28,7 +28,7 @@ Last update: {{ site.time | date_to_rfc822 }}
 Doctype:     HTML5
 Language:    English
 Standards:   HTML5, CSS3
-Components:  Modernizr, Normalize.css, jQuery, Bourbon, Neat
+Components:  Gulp, Normalize.css, jQuery, Bourbon, Neat
 Software:    VIM, Atom
 
 
