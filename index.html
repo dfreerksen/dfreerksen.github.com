@@ -19,7 +19,7 @@ layout: default
         </h2>
 
         <div class="post-excerpt">
-          {{ post.excerpt }}
+          {{ post.excerpt | strip_html}}
         </div>
       </li>
     {% endfor %}

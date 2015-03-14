@@ -45,7 +45,7 @@ permalink: /posts/:year/:month/:day/:title/
 paginate_path: /page/:num
 
 # Excerpts
-excerpt_separator: <!--more-->
+# excerpt_separator: <!--more-->
 
 # Default layouts
 defaults:
