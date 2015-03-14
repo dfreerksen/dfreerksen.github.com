@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /about/
+permalink: about/
 ---
 
 I’m David. I’m a husband, a developer, a veteran and a dog lover.

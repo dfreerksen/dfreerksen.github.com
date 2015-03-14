@@ -1,0 +1,18 @@
+- slug: cli
+  name: CLI
+- slug: jekyll
+  name: Jekyll
+- slug: mac
+  name: Mac
+- slug: misc
+  name: Misc
+- slug: nerdalert
+  name: Nerd Alert
+- slug: programming
+  name: Programming
+- slug: ruby
+  name: Ruby
+- slug: untagged
+  name: Untagged
+- slug: update
+  name: Update

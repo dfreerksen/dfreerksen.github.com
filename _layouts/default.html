@@ -1,9 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
-<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
-<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
-<!--[if IE 9]><html class="lt-ie10" lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}><!--<![endif]-->
+<html lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}>
 {% include head.html %}
 {% assign page_url = page.url | remove_first:"/" | replace:".html","" | split:"/" | join:"-" %}
 {% if "page" == page.type %}

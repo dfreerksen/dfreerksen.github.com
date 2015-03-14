@@ -1,18 +1,18 @@
 ---
 layout: default
 ---
-
-<div class="home">
+<div class="post">
   <header class="post-header">
-    <h1 class="page-heading">Posts</h1>
+    <h1 class="page-heading">Articles by tag: `{{ page.tag }}`</h1>
   </header>
 
   <div id="pagination-top" class="pagination">
     {% include posts/pagination.html %}
   </div>
 
-  <ul class="post-list">
-    {% for post in paginator.posts %}
+  {% if site.tags[page.tag] %}
+    <ul class="post-list">
+    {% for post in site.tags[page.tag] %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -25,7 +25,10 @@ layout: default
         </div>
       </li>
     {% endfor %}
-  </ul>
+    </ul>
+  {% else %}
+    <p>There are no posts for this tag.</p>
+  {% endif %}
 
   <div id="pagination-bottom" class="pagination">
     {% include posts/pagination.html %}
