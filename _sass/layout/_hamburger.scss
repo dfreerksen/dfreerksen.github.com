@@ -1,0 +1,76 @@
+/*-- Hamburger ---------------------------------------------------------------*/
+
+#menu-navigation {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: $hamburger-size;
+  height: $hamburger-size;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+    span,
+    span:before,
+    span:after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: $hamburger-bar-size;
+      background-color: #fff;
+    }
+
+    span {
+      top: ($hamburger-size / 2) - ($hamburger-bar-size / 2);
+      transition: background 0 0.3s;
+
+      &:before,
+      &:after {
+        left: 0;
+        content: "";
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0;
+      }
+
+      &:before {
+        top: (($hamburger-size / 2) - ($hamburger-bar-size)) * -1;
+        transition-property: top, transform;
+      }
+
+      &:after {
+        bottom: (($hamburger-size / 2) - ($hamburger-bar-size)) * -1;
+        transition-property: bottom, transform;
+      }
+    }
+
+    &.active {
+      span {
+        background: none;
+
+        &:before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+
+        &:before,
+        &:after {
+          transition-delay: 0, 0.3s;
+        }
+      }
+    }
+}
+
+/*-- Hamburger - Desktop -----------------------------------------------------*/
+@include media($tablet) {
+  #menu-navigation {
+    display: none;
+  }
+}

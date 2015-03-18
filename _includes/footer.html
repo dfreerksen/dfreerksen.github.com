@@ -1,66 +1,52 @@
-<footer class="site-footer">
-  <div class="wrap">
-    <h2 class="footer-heading">{{ site.title }}</h2>
+<footer id="footer">
+  <div class="inner">
+    <div class="social">
+      <ul>
+        {% if site.social.twitter %}
+        <li>
+          <a href="https://twitter.com/{{ site.social.twitter }}">
+            <i class="fa fa-twitter"></i>
+            <span class="username">Follow me on Twitter</span>
+          </a>
+        </li>
+        {% endif %}
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-        </ul>
-      </div>
+        {% if site.social.facebook %}
+        <li>
+          <a href="https://facebook.com/{{ site.social.facebook }}">
+            <i class="fa fa-facebook-square"></i>
+            <span class="username">Like me on Facebook</span>
+          </a>
+        </li>
+        {% endif %}
 
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
-          {% if site.social.twitter %}
-          <li>
-            <a href="https://twitter.com/{{ site.social.twitter }}">
-              <i class="fa fa-twitter"></i>
-              <span class="username">Follow me on Twitter</span>
-            </a>
-          </li>
-          {% endif %}
+        {% if site.social.instagram %}
+        <li>
+          <a href="http://instagram.com/{{ site.social.instagram }}">
+            <i class="fa fa-instagram"></i>
+            <span class="username">Like me on Instagram</span>
+          </a>
+        </li>
+        {% endif %}
 
-          {% if site.social.facebook %}
-          <li>
-            <a href="https://facebook.com/{{ site.social.facebook }}">
-              <i class="fa fa-facebook-square"></i>
-              <span class="username">Like me on Facebook</span>
-            </a>
-          </li>
-          {% endif %}
+        {% if site.social.github %}
+        <li>
+          <a href="https://github.com/{{ site.social.github }}">
+            <i class="fa fa-github"></i>
+            <span class="username">Fork me on Github</span>
+          </a>
+        </li>
+        {% endif %}
 
-          {% if site.social.instagram %}
-          <li>
-            <a href="http://instagram.com/{{ site.social.instagram }}">
-              <i class="fa fa-instagram"></i>
-              <span class="username">Like me on Instagram</span>
-            </a>
-          </li>
-          {% endif %}
-
-          {% if site.social.github %}
-          <li>
-            <a href="https://github.com/{{ site.social.github }}">
-              <i class="fa fa-github"></i>
-              <span class="username">Fork me on Github</span>
-            </a>
-          </li>
-          {% endif %}
-
-          {% if site.social.linkedin %}
-          <li>
-            <a href="https://www.linkedin.com/pub/{{ site.social.linkedin }}/">
-              <i class="fa fa-linkedin"></i>
-              <span class="username">Connect on Linkedin</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p class="text">{{ site.description }}</p>
-      </div>
+        {% if site.social.linkedin %}
+        <li>
+          <a href="https://www.linkedin.com/pub/{{ site.social.linkedin }}/">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">Connect on Linkedin</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
     </div>
 
     <div class="copyright">

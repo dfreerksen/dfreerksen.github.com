@@ -1,0 +1,23 @@
+/*-- Navigation --------------------------------------------------------------*/
+
+#navigation {
+  display: none;
+  text-align: center;
+}
+
+#navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+/*-- Navigation - Desktop ----------------------------------------------------*/
+@include media($tablet) {
+  #navigation {
+    display: block;
+  }
+}

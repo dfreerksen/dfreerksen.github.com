@@ -37,49 +37,51 @@
 
 /*-- Components --------------------------------------------------------------*/
 
-@import 'components/html';
-@import 'components/body';
-@import 'components/selection';
-@import 'components/links';
-@import 'components/images';
-@import 'components/grid';
-@import 'components/highlight';
-@import 'components/typography';
-@import 'components/objects';
-@import 'components/headings';
-@import 'components/blockquotes';
-@import 'components/keyframes';
-@import 'components/forms';
-@import 'components/buttons';
-@import 'components/tables';
-@import 'components/lists';
-@import 'components/helper';
+@import "components/breakpoints";
+@import "components/html";
+@import "components/body";
+@import "components/selection";
+@import "components/links";
+@import "components/images";
+@import "components/grid";
+@import "components/highlight";
+@import "components/typography";
+@import "components/objects";
+@import "components/headings";
+@import "components/blockquotes";
+@import "components/keyframes";
+@import "components/forms";
+@import "components/buttons";
+@import "components/tables";
+@import "components/lists";
+@import "components/helper";
 
-@import 'components/pagination/pagination';
-@import 'components/pagination/prev-next';
+@import "components/pagination/pagination";
+@import "components/pagination/prev-next";
 
-@import 'components/posts/share';
+@import "components/posts/share";
 
 /*-- Layout ------------------------------------------------------------------*/
 
-@import 'layout/header';
-@import 'layout/footer';
-
-@import 'layout/iealert';
-@import 'layout/noscript';
+@import "layout/iealert";
+@import "layout/noscript";
+@import "layout/header";
+@import "layout/hamburger";
+@import "layout/navigation";
+@import "layout/footer";
 
 
 /*-- Sections ----------------------------------------------------------------*/
 
-@import 'sections/pages';
-@import 'sections/posts';
-@import 'sections/tags';
-@import 'sections/home';
+@import "sections/pages";
+@import "sections/posts";
+@import "sections/tags";
+@import "sections/home";
 
 
 /*-- Print -------------------------------------------------------------------*/
 
-@import 'print/print';
+@import "print/print";
 
 
 
@@ -201,28 +203,4 @@ pre {
 
 .post-content {
   margin-bottom: $gap;
-
-  h2 {
-    font-size: 32px;
-
-    @include media-query(800px) {
-      font-size: 28px;
-    }
-  }
-
-  h3 {
-    font-size: 26px;
-
-    @include media-query(800px) {
-      font-size: 22px;
-    }
-  }
-
-  h4 {
-    font-size: 20px;
-
-    @include media-query(800px) {
-      font-size: 18px;
-    }
-  }
 }
