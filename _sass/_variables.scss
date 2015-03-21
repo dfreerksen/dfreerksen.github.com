@@ -32,7 +32,7 @@ $wrapper-max-width: $max-width;
 $wrapper-margin: 0 auto;
 
 
-/*-- Body Variables ----------------------------------------------------------*/
+/*-- Body --------------------------------------------------------------------*/
 
 $font-size: 16px;
 $font-family: Helvetica, Arial, sans-serif;
@@ -41,20 +41,41 @@ $text-color: #111111;
 $background-color: #fdfdfd;
 $line-height: 1.5;
 
-$text-alt-color: #ffffff;
-$background-alt-color: #000000;
-$background-alt-opacity: 0.9;
+$font-size-small: $font-size - 3px;
+$font-size-large: $font-size + 3px;
 
+
+/*-- Header/Footer Overlay ---------------------------------------------------*/
+
+$overlay-background-color: #000000;
+$overlay-background-opacity: 1.0;
+$overlay-position: relative;
+
+
+
+$text-alt-color: #ffffff;
 
 /*-- Hamburger ---------------------------------------------------------------*/
 
 $hamburger-size: 32px;
+$hamburger-color: #ffffff;
 $hamburger-bar-size: 4px;
+
+
+/*-- Navigation --------------------------------------------------------------*/
+
+$navigation-opacity-open: 1;
+$navigation-opacity-closed: 0;
+
+$navigation-height-open: auto;
+$navigation-height-closed: 0;
+
+$navigation-transition: all 0.3s;
 
 
 /*-- Links -------------------------------------------------------------------*/
 
-$link-transition: all .25s;
+$link-transition: all .3s;
 
 $link-color: #2a7ae2;
 $link-decoration: none;
@@ -203,20 +224,6 @@ $blockquote-quote-size: 70px;
 
 $blockquote-cite-color: #555555;
 $blockquote-cite-size: 12px;
-
-
-/*-- Mobile Icon -------------------------------------------------------------*/
-
-// $mobile-icon-bar-width: 24px;
-// $mobile-icon-bar-height: 4px;
-
-// $mobile-icon-bar-spacing: 7px;
-
-// $mobile-icon-duration: .5s;
-// $mobile-icon-color: #000000;
-// $mobile-icon-toggled-size: 1;
-
-
 
 
 /*-- Below this line will die out when the design is ready -------------------*/

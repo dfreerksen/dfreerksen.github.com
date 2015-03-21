@@ -1,13 +1,12 @@
 /*-- Header ------------------------------------------------------------------*/
 
 #header {
-  background-color: $background-alt-color;
-  opacity: $background-alt-opacity;
+  background-color: $overlay-background-color;
+  opacity: $overlay-background-opacity;
   padding: 10px;
-  position: relative;
-  // position: fixed;
-  // top: 0;
-  // width: 100%;
+  position: $overlay-position;
+  top: 0;
+  width: 100%;
 
   a {
     border: none;

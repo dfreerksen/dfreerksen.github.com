@@ -1,23 +1,31 @@
 /*-- Navigation --------------------------------------------------------------*/
 
 #navigation {
-  display: none;
+  @include transition($navigation-transition);
   text-align: center;
-}
+  opacity: $navigation-opacity-closed;
+  height: $navigation-height-closed;
 
-#navigation ul {
-  margin: 0;
-  padding: 0;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-#navigation li {
-  list-style-type: none;
-  display: inline-block;
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  &.active {
+    opacity: $navigation-opacity-open;
+    height: $navigation-height-open;
+  }
 }
 
 /*-- Navigation - Desktop ----------------------------------------------------*/
 @include media($tablet) {
   #navigation {
-    display: block;
+    opacity: $navigation-opacity-open;
+    height: $navigation-height-open;
   }
 }

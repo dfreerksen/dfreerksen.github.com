@@ -1,9 +1,13 @@
 /*-- Footer ------------------------------------------------------------------*/
 
 #footer {
-  background-color: $background-alt-color;
-  opacity: $background-alt-opacity;
+  background-color: $overlay-background-color;
+  opacity: $overlay-background-opacity;
+  position: $overlay-position;
+  width: 100%;
+  bottom: 0;
   padding: 10px;
+  font-size: $font-size-small;
 
   a {
     border: none;
@@ -26,6 +30,7 @@
 
   .social {
     text-align: center;
+    margin-bottom: 10px;
 
     ul {
       margin: 0;
@@ -35,6 +40,11 @@
     li {
       list-style-type: none;
       display: inline-block;
+      margin-left: 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
 
       &.twitter { }
 
@@ -60,18 +70,20 @@
 /*-- Footer - Desktop --------------------------------------------------------*/
 @include media($tablet) {
   #footer {
+    font-size: $font-size;
+
     .social {
       float: right;
       display: block;
-      margin-right: 0;
-      width: 24.11765%;
+      margin: 0;
+      width: 24%;
     }
 
     .copyright {
       float: left;
       display: block;
-      margin-right: 1.17647%;
-      width: 74.70588%;
+      margin-right: 1%;
+      width: 75%;
     }
   }
 }
