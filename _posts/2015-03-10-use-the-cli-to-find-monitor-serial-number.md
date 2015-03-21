@@ -22,4 +22,4 @@ Or even more simply:
 $ system_profiler SPDisplaysDataType | grep "Display Serial"
 ```
 
-This works on all external monitors, not just Apple monitors.
+This should work on all external monitors, not just Apple monitors.
