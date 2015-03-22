@@ -12,10 +12,21 @@
   li {
     @include inline-block;
     list-style-type: none;
-    margin-left: 10px;
+    margin-left: $gap;
 
     &:first-child {
       margin-left: 0;
+    }
+  }
+
+  a {
+    color: $black;
+    text-shadow: 0 0 4px $white;
+    font-weight: bold;
+
+    &:hover {
+      color: $white;
+      text-shadow: 0 0 4px $black;
     }
   }
 }

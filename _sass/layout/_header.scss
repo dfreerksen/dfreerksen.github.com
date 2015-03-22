@@ -2,14 +2,19 @@
 
 #header {
   padding: 10px;
+  @include opacity(0.75);
+  background-image: url(../../assets/images/headers/underpass.jpg);
+  background-position: center bottom;
+  background-size: cover;
 
   .inner {
+    @include opacity(1);
     max-width: $max-width;
     margin: 0 auto;
   }
 
   .title {
-    margin: 0 auto;
+    margin: 100px auto 0;
     @include hide-text;
     @include size(72px);
     background-image: url(../../assets/images/logo.png);

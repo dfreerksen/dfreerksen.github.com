@@ -12,6 +12,23 @@
 }
 
 
+/*-- background-opacity ------------------------------------------------------*/
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+
+/*-- opacity -----------------------------------------------------------------*/
+
+@mixin opacity($opacity: 0.5) {
+  $opacityMultiplied: ($opacity * 100);
+  filter: alpha(opacity=$opacityMultiplied);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+  @include prefixer(opacity, $opacity, spec);
+}
+
+
 /*-- box-shadow - Deprecated from Bourbon ------------------------------------*/
 
 @mixin box-shadow($shadows...) {

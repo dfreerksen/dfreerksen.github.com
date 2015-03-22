@@ -13,9 +13,7 @@ I am a Senior Software Engineer for [Wonderful Union][wun], formerly known as [g
 
 In my free time I work on code, go to the gym, and watch movies on Netflix.
 
-You can [view my resume][resume].
-
-I am currently not available for freelance work.
+You can [view my resume][resume]. I am currently not available for freelance work.
 
 ![David and Kate][us]
 
