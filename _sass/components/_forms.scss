@@ -4,7 +4,7 @@ form { }
 
 fieldset {
   @include border-radius($form-fieldset-border-radius);
-  border: $form-fieldset-border-type $form-fieldset-border-width $form-fieldset-border-color;
+  border: $form-fieldset-border-style;
   margin: $gap 0;
   padding: $gap;
 }
@@ -17,7 +17,7 @@ label {
   display: block;
 
   span.required {
-    color: #ff2f25;
+    color: $red;
   }
 }
 
@@ -44,7 +44,7 @@ input[type="range"],
   @include transition($form-input-transition);
   @include border-radius($form-input-radius);
   padding: $form-input-padding;
-  border: $form-input-border;
+  border: $form-input-border-style;
   background-color: $form-input-background-color;
   color: $form-input-text-color;
   display: block;

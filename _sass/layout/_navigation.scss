@@ -3,34 +3,19 @@
 #navigation {
   @include transition($navigation-transition);
   text-align: center;
-  opacity: $navigation-opacity-closed;
-  height: $navigation-height-closed;
 
   ul {
-    margin: 0;
+    margin: $gap 0 0;
     padding: 0;
   }
 
   li {
+    @include inline-block;
     list-style-type: none;
-    display: inline-block;
     margin-left: 10px;
 
     &:first-child {
       margin-left: 0;
     }
-  }
-
-  &.active {
-    opacity: $navigation-opacity-open;
-    height: $navigation-height-open;
-  }
-}
-
-/*-- Navigation - Desktop ----------------------------------------------------*/
-@include media($tablet) {
-  #navigation {
-    opacity: $navigation-opacity-open;
-    height: $navigation-height-open;
   }
 }

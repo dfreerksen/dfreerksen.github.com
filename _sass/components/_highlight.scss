@@ -1,8 +1,10 @@
 /*-- Pygment Highlight -----------------------------*/
 
 .highlight {
-  background: #ffffff;
-  color: #000000;
+  background: $white;
+  color: $black;
+  border: $border-style;
+  border-radius: 3px;
 
   pre {
     margin: 5px;

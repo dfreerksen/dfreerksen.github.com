@@ -27,7 +27,6 @@
 @import "mixins/omega";
 @import "mixins/placeholder";
 @import "mixins/print";
-@import "mixins/lists";
 
 
 /*-- Fonts (Font Awesome) ----------------------------------------------------*/
@@ -37,7 +36,7 @@
 
 /*-- Components --------------------------------------------------------------*/
 
-@import "components/breakpoints";
+@import "components/all";
 @import "components/html";
 @import "components/body";
 @import "components/selection";
@@ -55,153 +54,22 @@
 @import "components/tables";
 @import "components/lists";
 @import "components/helper";
+@import "components/pagination";
+@import "components/share";
+@import "components/posts";
+@import "components/post";
 
-@import "components/pagination/pagination";
-@import "components/pagination/prev-next";
-
-@import "components/posts/share";
 
 /*-- Layout ------------------------------------------------------------------*/
 
 @import "layout/iealert";
 @import "layout/noscript";
 @import "layout/header";
-@import "layout/hamburger";
 @import "layout/navigation";
 @import "layout/wrapper";
 @import "layout/footer";
 
 
-/*-- Sections ----------------------------------------------------------------*/
-
-@import "sections/pages";
-@import "sections/posts";
-@import "sections/tags";
-@import "sections/home";
-
-
 /*-- Print -------------------------------------------------------------------*/
 
 @import "print/print";
-
-
-
-
-
-
-/*-- Below this line will die out when the design is ready -------------------*/
-
-/**
-* Code formatting
-*/
-pre,
-code {
-  font-size: 15px;
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: scroll;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-/**
-* Wrapper
-*/
-.wrap {
-  max-width: -webkit-calc(#{$content-width} - (#{$gap} * 2));
-  max-width:         calc(#{$content-width} - (#{$gap} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $gap;
-  padding-left: $gap;
-  @extend %clearfix;
-
-  @include media-query(800px) {
-    max-width: -webkit-calc(#{$content-width} - (#{$gap}));
-    max-width:         calc(#{$content-width} - (#{$gap}));
-    padding-right: $gap / 2;
-    padding-left: $gap / 2;
-  }
-}
-
-/**
-* Clearfix
-*/
-%clearfix {
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-
-
-
-/**
-* Page content
-*/
-.page-content {
-  padding: $gap 0;
-}
-
-.page-heading {
-  font-size: 20px;
-}
-
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $gap;
-  }
-}
-
-.post-meta {
-  font-size: $font-size - 2px;
-  color: $grey-color;
-}
-
-.post-link {
-  display: block;
-  font-size: 24px;
-}
-
-
-
-/**
-* Posts
-*/
-.post-header {
-  margin-bottom: $gap;
-}
-
-.post-title {
-  font-size: 42px;
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query(800px) {
-    font-size: 36px;
-  }
-}
-
-.post-content {
-  margin-bottom: $gap;
-}

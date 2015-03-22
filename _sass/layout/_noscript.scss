@@ -1,5 +1,9 @@
 /*-- Noscript ----------------------------------------------------------------*/
 
 #noscript {
-
+  text-align: center;
+  padding: $gap / 2;
+  margin: $gap / 2;
+  background-color: $noscript-background-color;
+  border: $noscript-border-style;
 }

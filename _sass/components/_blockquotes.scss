@@ -12,7 +12,7 @@
 
 blockquote {
   background: $blockquote-background-color;
-  border-left: $blockquote-border-width $blockquote-border-type $blockquote-border-color;
+  border-left: $blockquote-border-style;
   margin: 10px 0;
   padding: 10px;
   text-align: left;
@@ -60,7 +60,7 @@ blockquote {
   // Reversed blockquote
   &.reverse {
     border-left: none;
-    border-right: $blockquote-border-width $blockquote-border-type $blockquote-border-color;
+    border-right: $blockquote-border-style;
     padding: 0 1em 0 0;
     text-align: right;
   }

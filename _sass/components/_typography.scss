@@ -6,27 +6,27 @@ p {
 
 acronym {
   cursor: help;
-  border-bottom: 1px dashed blue;
+  border-bottom: 1px dashed $blue;
 }
 
 kbd {
-  background-color: #333;
+  background-color: $dark-gray;
   border-radius: 4px;
-  color: #fff;
+  color: $white;
   font-size: 90%;
   padding: 1px 4px;
 }
 
 var {
   margin: 0;
-  border: 1px solid #ddd;
-  background-color: #f8f8f8;
+  border: 1px solid $light-gray;
+  background-color: $super-light-gray;
   @include border-radius(3px);
   padding: 0 4px 0 0;
 
   &:before,
   &:after {
-    content: '`';
+    content: '';
   }
 }
 
@@ -65,7 +65,7 @@ abbr { }
 
 mark {
   @include border-radius(3px);
-  background: #ffd544;
+  background: $yellow;
   padding: 0 3px;
 }
 

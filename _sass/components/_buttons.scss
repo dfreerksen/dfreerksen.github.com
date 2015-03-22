@@ -7,7 +7,7 @@ input[type="reset"],
 input[type="submit"] {
   @include inline-block;
   @include border-radius($button-border-radius);
-  border: $button-border-size $button-border-type $button-border-color;
+  border: $button-border-style;
   box-shadow: inset $button-shadow-x $button-shadow-y $button-shadow-blur $button-shadow-spread $button-shadow-color;
   color: $button-text-color;
   font-size: inherit;

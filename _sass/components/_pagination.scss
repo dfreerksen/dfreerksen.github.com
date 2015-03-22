@@ -1,0 +1,32 @@
+/*-- Pagination --------------------------------------------------------------*/
+
+#pagination-top,
+#pagination-bottom { }
+
+#pagination-top { }
+
+#pagination-bottom { }
+
+.pagination {
+  text-align: center;
+
+  .previous,
+  .next {
+    display: none;
+  }
+
+  .previous { }
+
+  .next { }
+
+  em { }
+
+  .left,
+  .right {
+    @include inline-block;
+  }
+
+  .left { }
+
+  .right { }
+}

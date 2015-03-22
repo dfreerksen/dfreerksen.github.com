@@ -1,36 +1,18 @@
 /*-- Header ------------------------------------------------------------------*/
 
 #header {
-  background-color: $overlay-background-color;
-  opacity: $overlay-background-opacity;
   padding: 10px;
-  position: $overlay-position;
-  top: 0;
-  width: 100%;
-
-  a {
-    border: none;
-    outline: none;
-    color: $link-alt-color;
-    text-decoration: $link-alt-decoration;
-
-    &:hover {
-      color: $link-alt-hover-color;
-      text-decoration: $link-alt-hover-decoration;
-    }
-  }
 
   .inner {
     max-width: $max-width;
     margin: 0 auto;
-    color: $text-alt-color;
   }
 
   .title {
-    text-align: center;
     margin: 0 auto;
-    // height: 50px;
-    // width: 50px;
-    // overflow: hidden;
+    @include hide-text;
+    @include size(72px);
+    background-image: url(../../assets/images/logo.png);
+    overflow: hidden;
   }
 }

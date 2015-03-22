@@ -1,23 +1,43 @@
 /*-- Old IE Alert ------------------------------------------------------------*/
 
 #iealert {
+  padding: $gap / 2;
+  margin: $gap / 2;
+  background-color: $iealert-background-color;
+  border: $iealert-border-style;
+
   ul {
     margin: 0;
     padding: 0;
+    text-align: center;
 
     li {
       list-style-type: none;
       @include inline-block;
+      @include hide-text;
+      @include size(72px);
+      overflow: hidden;
+      background-size: cover;
 
-      &.firefox { }
+      &.firefox {
+        background-image: url(../../assets/images/browsers/firefox.png);
+      }
 
-      &.safari { }
+      &.safari {
+        background-image: url(../../assets/images/browsers/safari.png);
+      }
 
-      &.chrome { }
+      &.chrome {
+        background-image: url(../../assets/images/browsers/chrome.png);
+      }
 
-      &.opera { }
+      &.opera {
+        background-image: url(../../assets/images/browsers/opera.png);
+      }
 
-      &.ie { }
+      &.ie {
+        background-image: url(../../assets/images/browsers/ie.png);
+      }
     }
   }
 }

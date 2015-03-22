@@ -78,9 +78,6 @@
 // |                                                                           |
 // |---------------------------------------------------------------------------|
 
-// Media Queries
-// TODO: Media query selectors
-
 // Container
 .grid {
   @include outer-container;
@@ -123,24 +120,24 @@
     }
   }
 
-  // .row,
-  // .row-table {
-  //   @include row(table);
-  // }
+  .row,
+  .row-table {
+    @include row(table);
+  }
 
-  // .row-block {
-  //   @include row(block);
-  // }
+  .row-block {
+    @include row(block);
+  }
 
-  // .reset {
-  //   @include reset-display;
-  // }
+  .reset {
+    @include reset-display;
+  }
 
-  // .pad {
-  //   @include pad();
-  // }
+  .pad {
+    @include pad();
+  }
 
-  // .fill-parent {
-  //   @include fill-parent;
-  // }
+  .fill-parent {
+    @include fill-parent;
+  }
 }

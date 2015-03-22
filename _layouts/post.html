@@ -34,13 +34,15 @@ layout: default
     {{ content }}
   </article>
 
+  {% if page.sharing %}
+  <footer class="post-footer">
+    {% include posts/share.html %}
+  </footer>
+  {% endif %}
+
   <div id="pagination-bottom" class="pagination">
     {% include posts/prev_next.html %}
   </div>
-
-  {% if page.sharing %}
-    {% include posts/share.html %}
-  {% endif %}
 
   {% if page.comments %}
     {% include posts/comments.html %}
