@@ -4,10 +4,12 @@
 requirejs.config
   baseUrl: 'assets/javascripts'
   paths:
-    jquery: 'vendor/jquery-1.11.2.min'
+    jquery: 'vendor/jquery.min'
+    consolelog: 'vendor/consolelog.min'
 requirejs [
   'jquery'
+  'consolelog'
   'site'
 ], ($) ->
-  console.log 'application!'
+  console.log 'application'
   return

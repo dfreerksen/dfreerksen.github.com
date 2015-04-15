@@ -6,7 +6,7 @@ var config       = require('../../config'),
 
 module.exports = {
   src:  config.assets.bower + '/jquery/dist/jquery.min.map',
-  dest: config.assets.destination + '/javascripts'
+  dest: config.assets.vendor
 };
 
 gulp.task('jquerymap', function() {

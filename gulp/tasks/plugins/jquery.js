@@ -6,7 +6,7 @@ var config       = require('../../config'),
 
 module.exports = {
   src:  config.assets.bower + '/jquery/dist/jquery.min.js',
-  dest: config.assets.javascript + '/jquery'
+  dest: config.assets.vendor
 };
 
 gulp.task('jquery', function() {

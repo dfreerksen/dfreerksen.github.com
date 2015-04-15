@@ -1,4 +1,4 @@
 ---
 ---
 
-console.log 'site!'
+console.log 'site'

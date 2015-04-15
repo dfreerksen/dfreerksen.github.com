@@ -1,16 +1,16 @@
 module.exports = {
   // Base
-  base:   './',
+  base: './',
   // Assets
   assets: {
-    base:        './',
-    bower:       './bower_components',
-    javascript:  './_javascript',
-    sass:        './_sass',
-    destination: './assets'
+    base:       './',
+    bower:      './bower_components',
+    sass:       './_sass',
+    assets:     './assets',
+    javascript: './assets/javascripts',
+    vendor:     './assets/javascripts/vendor'
   },
   localRootUrl: null,
-  // Production
   blessing: false,
   linting: false,
   compressing: false,
