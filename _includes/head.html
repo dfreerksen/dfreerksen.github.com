@@ -33,5 +33,8 @@
   {% include head/meta/feeds.html %}
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="{{ "/assets/stylesheets/site.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/stylesheets/application.css" | prepend: site.baseurl }}">
+
+  <!-- Javascript -->
+  <script data-main="assets/javascripts/application" src="{{ "/assets/javascripts/vendor/require.js" | prepend: site.baseurl }}"></script>
 </head>
