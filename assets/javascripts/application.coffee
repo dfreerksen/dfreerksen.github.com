@@ -9,7 +9,6 @@ requirejs.config
 requirejs [
   'jquery'
   'consolelog'
-  'site'
 ], ($) ->
-  console.log 'application'
+  console.log 'davidfreerksen.com'
   return
