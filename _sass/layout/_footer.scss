@@ -1,11 +1,22 @@
 /*-- Footer ------------------------------------------------------------------*/
 
 #footer {
+  background-color: $alt-blue;
+  margin-top: $gap;
   padding: 10px;
 
   .inner {
     max-width: $max-width;
     margin: 0 auto;
+    color: $white;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   .social {
