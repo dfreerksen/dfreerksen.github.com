@@ -3,6 +3,8 @@ title: About
 permalink: about/
 ---
 
+<img src="{{ "/assets/images/pages/about/us.jpg" | prepend: site.baseurl }}" alt="David and Kate" class="us">
+
 I’m David. I’m a husband, a developer, a veteran and a dog lover.
 
 I was raised in Texas. I joined the Marine Corps in 2003 as an infantry mortarman. I was combat deployed to Afghanistan in 2005. In 2008 I moved to California. I currently live in Elk Grove, California with my wife and three dogs.
@@ -15,12 +17,6 @@ In my free time I work on code, go to the gym, and watch movies on Netflix.
 
 You can [view my resume][resume]. I am currently not available for freelance work.
 
-![David and Kate][us]
-
-![David and Kate][us2]
-
-[us]:     {{ "/assets/images/pages/about/us.jpg" | prepend: site.baseurl }}
-[us2]:    {{ "/assets/images/pages/about/us2.jpg" | prepend: site.baseurl }}
 [resume]: {{ "/assets/pdf/david.freerksen.pdf" | prepend: site.baseurl }}
 
 [wun]:   http://wonderfulunion.com
