@@ -1,17 +1,28 @@
 <header id="header">
-  <div class="inner">
-    <a href="{{ site.baseurl }}/" title="{{ site.title }}">
-      <h1 class="title">
-        {{ site.title }}
+  <div class="bar">
+    <div class="inner">
+      <h1 class="logo">
+        <a href="{{ "/" | prepend:site.baseurl }}" title="{{ site.title }}">
+          {{ site.title }}
+        </a>
       </h1>
-    </a>
 
-    <nav id="navigation">
-      <ul>
-        {% for link in site.data.navigation %}
-        <li><a class="page-link" href="{{ link.href | prepend:site.baseurl }}"{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+      <nav id="navigation">
+        <ul>
+          {% for link in site.data.navigation %}
+          <li><a class="page-link" href="{{ link.href | prepend:site.baseurl }}"{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="title">
+    <span class="circuit-left"></span>
+    <span class="circuit-right"></span>
+
+    <h1 class="name">{{ site.title }}</h1>
+
+    <div class="position">Software Engineer</div>
   </div>
 </header>

@@ -2,7 +2,7 @@
 ---
 
 requirejs.config
-  baseUrl: '/assets/javascripts'
+  baseUrl: '{{ "/assets/javascripts" | prepend:site.baseurl }}'
   paths:
     jquery: 'vendor/jquery.min'
     consolelog: 'vendor/consolelog.min'

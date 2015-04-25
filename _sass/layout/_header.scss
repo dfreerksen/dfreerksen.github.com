@@ -1,23 +1,88 @@
 /*-- Header ------------------------------------------------------------------*/
 
 #header {
-  padding: 10px;
-  @include opacity(0.75);
-  background-image: url(../../assets/images/headers/underpass.jpg);
-  background-position: center bottom;
+  margin-bottom: $gap;
+  background-image: url(../../assets/images/mountains.jpg);
+  background-position: center top;
   background-size: cover;
+  //height: 275px;
+  color: $white;
+  text-transform: uppercase;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .bar {
+    background-color: $alt-blue;
+    padding: 10px;
+  }
 
   .inner {
-    @include opacity(1);
+    @include outer-container;
     max-width: $max-width;
     margin: 0 auto;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0;
+
+    a {
+      @include size(26px 39px);
+      background-image: url(../../assets/images/logo.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+      font-size: $font-size;
+      padding: 14px 0 8px 36px;
+      vertical-align: middle;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  @include min-screen($tablet) {
+    .logo {
+      @include span-columns(6);
+    }
+  }
+
+  .circuit-left,
+  .circuit-right {
+    @include inline-block;
+    @include size(266px 155px);
+    position: absolute;
+    top: 125px;
+  }
+
+  .circuit-left {
+    background-image: url(../../assets/images/circuit-left.png);
+    left: 0;
+  }
+
+  .circuit-right {
+    background-image: url(../../assets/images/circuit-right.png);
+    right: 0;
   }
 
   .title {
-    margin: 100px auto 0;
-    @include hide-text;
-    @include size(72px);
-    background-image: url(../../assets/images/logo.png);
-    overflow: hidden;
+    padding: 75px 0;
+    text-align: center;
+
+    .name { }
+
+    .position { }
+  }
+}
+
+@include min-screen($tablet) {
+  #header {
+    background-position: center 25%;
   }
 }

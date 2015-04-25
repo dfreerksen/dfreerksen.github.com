@@ -4,11 +4,16 @@
   background-color: $alt-blue;
   margin-top: $gap;
   padding: 10px;
+  color: $white;
+  font-size: $font-size-small;
+
+  @include min-screen($tablet) {
+    font-size: $font-size;
+  }
 
   .inner {
     max-width: $max-width;
     margin: 0 auto;
-    color: $white;
   }
 
   a {

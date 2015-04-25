@@ -1,17 +1,3 @@
-/*-- inline-block - Deprecated from Bourbon ----------------------------------*/
-
-@mixin inline-block($alignment: none) {
-  display: -moz-inline-stack;
-  display: inline-block;
-  @if $alignment and $alignment != none {
-    vertical-align: $alignment;
-  }
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
-
 /*-- background-opacity ------------------------------------------------------*/
 @mixin background-opacity($color: #000, $opacity: 0.85) {
   background: $color;
@@ -26,6 +12,20 @@
   filter: alpha(opacity=$opacityMultiplied);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
   @include prefixer(opacity, $opacity, spec);
+}
+
+
+/*-- inline-block - Deprecated from Bourbon ----------------------------------*/
+
+@mixin inline-block($alignment: none) {
+  display: -moz-inline-stack;
+  display: inline-block;
+  @if $alignment and $alignment != none {
+    vertical-align: $alignment;
+  }
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 
 

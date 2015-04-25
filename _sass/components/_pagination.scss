@@ -8,16 +8,19 @@
 #pagination-bottom { }
 
 .pagination {
+  color: $medium-gray;
   text-align: center;
 
   .previous,
-  .next {
-    display: none;
+  .next { }
+
+  .previous {
+    margin-right: $gap;
   }
 
-  .previous { }
-
-  .next { }
+  .next {
+    margin-left: $gap;
+  }
 
   em { }
 

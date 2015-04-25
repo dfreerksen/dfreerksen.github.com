@@ -3,15 +3,11 @@
 ul,
 ol {
   position: relative;
-
-  a {
-    display: block;
-  }
 }
 
 ul {
   margin-left: $gap;
-  padding-left: 0px;
+  padding-left: 0;
 
   ul {
     list-style-type: circle;
@@ -24,7 +20,7 @@ ul {
 }
 
 ol {
-  margin-left: 0px;
+  margin-left: 0;
   padding-left: $gap;
 
   ol {
