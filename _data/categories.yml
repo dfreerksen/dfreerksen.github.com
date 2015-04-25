@@ -1,0 +1,14 @@
+- slug: cli
+  name: cli
+- slug: jekyll
+  name: jekyll
+- slug: mac
+  name: mac
+- slug: misc
+  name: misc
+- slug: programming
+  name: programming
+- slug: unknown
+  name: unknown
+- slug: update
+  name: update
