@@ -13,7 +13,9 @@ It is assumed that [Ruby](http://www.ruby-lang.org) is already set up on your ma
 
 It is assumed [Bundler](http://bundler.io/) is already installed. If it is not, install it using:
 
-    gem install bundler
+```
+gem install bundler
+```
 
 #### NPM
 
@@ -25,13 +27,17 @@ Bower is used to manage various components used on the site. Github Pages will n
 
 To install Bower, run:
 
-    npm install -g bower
+```
+npm install -g bower
+```
 
 #### Gulp
 
 Gulp is used to build compiled Javascript and move Bower assets into place. Github Pages will not run this command. This needs to be ran in development. Install Gulp by running:
 
-    npm install -g gulp
+```
+npm install -g gulp
+```
 
 NOTE: SASS and Coffeescript are compiled my Jekyll. Gulp is only used to concat Javascript into a single file.  
 
@@ -42,13 +48,17 @@ NOTE: SASS and Coffeescript are compiled my Jekyll. Gulp is only used to concat 
 
 Install all required gems by running:
 
-    bundle install
+```
+bundle install
+```
 
 #### NPM
 
 Install NPM assets by running:
 
-    npm install
+```
+npm install
+```
 
 > NOTE: The first time running this it will take a while. Patience is a virtue. It should not take as long when this is run subsequent times.
 
@@ -56,31 +66,43 @@ Install NPM assets by running:
 
 To install Bower components, run:
 
-    bower install
+```
+bower install
+```
 
 #### Gulp
 
 Gulp is used to concat various Javascript files into a single file. To make Gulp build the file but not watch for file changes, run:
 
-    gulp
+```
+gulp
+```
 
 To make Gulp watch for file changes, simply run:
 
-    gulp watch
+```
+gulp watch
+```
 
 Gulp is also used to move various assets into place. This requires a separate command from just running the `gulp` or `gulp watch`. To move assets into their required location, run:
 
-    gulp organize
+```
+gulp organize
+```
 
 #### Jekyll
 
 [Jekyll](http://jekyllrb.com/) is used to build this site. To build the site, run:
 
-    jekyll build
+```
+jekyll build
+```
 
 To build the site but also watch for file changes, run:
 
-    jekyll serve
+```
+jekyll serve
+```
 
 This will start a Rake server to allow you to view the site in the browser by going to [http://localhost:4000/](http://localhost:4000/)
 
@@ -89,27 +111,39 @@ This will start a Rake server to allow you to view the site in the browser by go
 
 Install/update gems:
 
-    bundle install
+```
+bundle install
+```
 
 Install/update NPM components
 
-    npm install
+```
+npm install
+```
 
 Install/update Bower components
 
-    bower install
+```
+bower install
+```
 
 Move assets into place
 
-    gulp organize
+```
+gulp organize
+```
 
 Build compiled Javascript file
 
-    gulp
+```
+gulp
+```
 
 Build the site
 
-    jekyll serve
+```
+jekyll serve
+```
 
 
 ## Contributing
