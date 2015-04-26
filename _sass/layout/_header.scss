@@ -55,10 +55,17 @@
 
   .circuit-left,
   .circuit-right {
-    @include inline-block;
+    display: none;
     @include size(266px 155px);
     position: absolute;
-    top: 125px;
+    top: 25px;
+  }
+
+  @include min-screen($tablet) {
+    .circuit-left,
+    .circuit-right {
+      @include inline-block;
+    }
   }
 
   .circuit-left {
@@ -74,6 +81,7 @@
   .title {
     padding: 75px 0;
     text-align: center;
+    position: relative;
 
     .name { }
 

@@ -2,9 +2,7 @@
 
 #iealert {
   padding: $gap / 2;
-  margin: $gap / 2;
   background-color: $iealert-background-color;
-  border: $iealert-border-style;
 
   ul {
     margin: 0;
@@ -18,6 +16,11 @@
       @include size(72px);
       overflow: hidden;
       background-size: cover;
+      margin-left: 30px;
+
+      &:first-child {
+        margin-left: 0;
+      }
 
       &.firefox {
         background-image: url(../../assets/images/browsers/firefox.png);
@@ -37,6 +40,11 @@
 
       &.ie {
         background-image: url(../../assets/images/browsers/ie.png);
+      }
+
+      a {
+        display: block;
+        @include size(100%);
       }
     }
   }
