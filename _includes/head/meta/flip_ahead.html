@@ -1,0 +1,5 @@
+{% if "post" == page.type %}
+<!-- Flip ahead browsing -->
+{% if page.next.url %}<link rel="next" href="{{ page.next.url }}" />{% endif %}
+{% if page.previous.url %}<link rel="prev" href="{{ page.previous.url }}" />{% endif %}
+{% endif %}
