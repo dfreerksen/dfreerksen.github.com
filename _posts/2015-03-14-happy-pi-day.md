@@ -7,7 +7,7 @@ tags:
 - nerdalert
 ---
 
-I celebrate every year on Pi Day. By eating pie. This is is special year though.
+I celebrate every year on Pi Day. By eating pie. This is a special year though.
 
 In case you are out of school and have forgotten everything about math, Pi (&pi;) is a mathematical constant that describes the ratio of a circle's circumference to its diameter, and it represents an infinite string of numbers. And if you are still lost, you'll know it as 3.14.
 
