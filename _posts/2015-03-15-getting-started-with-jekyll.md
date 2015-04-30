@@ -21,7 +21,7 @@ You will need:
 * Minimal knowledge of the command line
 * Ruby
 
-First, start of Terminal. Terminal is located at `/Applications/Utilities/Terminal.app`. You can either browse Finder to find the application or enter `Terminal` into Spotlight and it will find it for you.
+First, start up Terminal. Terminal is located at `/Applications/Utilities/Terminal.app`. You can either browse Finder to find the application or enter `Terminal` into Spotlight and it will find it for you.
 
 If you are on a Mac, Ruby came pre-installed on your computer. Just out of curiosity, let's check the version of Ruby we are running:
 
@@ -45,7 +45,7 @@ The next thing we have to do is decide where to put our new Jekyll site. You can
 $ cd ~/Documents
 ```
 
-On the Mac, `~` represents your home directory. Your home directory is generally located at `/Users/<your-account>`. When you enter `cd ~/Documents` you are actually entering `cd /Users/<your-account>/Documents`. You can move around through directories using `cd`. This is the Unix command for change directory
+The `~` represents your home directory. Your home directory is generally located at `/Users/<your-account>`. When you enter `cd ~/Documents` you are actually entering `cd /Users/<your-account>/Documents`. You can move around through directories using `cd`. This is the Unix command for change directory
 
 Side note: At any time, if you are not sure what directory you are in using Terminal, enter `pwd`. This is the Unix command for `print working directory`. It will tell you the current directory you are in.
 
@@ -113,5 +113,5 @@ I'm not going to reinvent the wheel and explain how to format your Markdown and 
 [jekyll]:        http://jekyllrb.com/
 [ruby]:          https://www.ruby-lang.org/
 [markdown]:      http://en.wikipedia.org/wiki/Markdown
-[documentation]: http://jekyllrb.com/docs/home/i
+[documentation]: http://jekyllrb.com/docs/home/
 [liquid]:        http://liquidmarkup.org/
