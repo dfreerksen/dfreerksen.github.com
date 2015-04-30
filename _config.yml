@@ -98,7 +98,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - HELP.md
   - TODO.md
   - bower.json
   - /bower_components
