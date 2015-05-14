@@ -17,7 +17,7 @@ baseurl: ""
 url: http://www.davidfreerksen.com
 
 # Version
-version: 1.1.2 # format: major.update.fix
+version: 1.2.0 # format: major.update.fix
 
 # Encoding
 encoding: utf-8
@@ -28,7 +28,7 @@ social:
   facebook: dfreerksen
   instagram: dfreerksen
   github: dfreerksen
-  linkedin: https://www.linkedin.com/pub/david-freerksen/6/4b5/992
+  linkedin: dfreerksen
 
 # Available for hire
 available: false
