@@ -1,6 +1,5 @@
 ---
 ---
-
 requirejs.config
   baseUrl: '{{ "/assets/javascripts" | prepend:site.baseurl }}'
   paths:
@@ -10,5 +9,5 @@ requirejs [
   'jquery'
   'consolelog'
 ], ($) ->
-  console.log 'www.davidfreerksen.com'
+  # console.log 'www.davidfreerksen.com'
   return
