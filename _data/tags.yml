@@ -10,6 +10,10 @@
   name: nerd alert
 - slug: programming
   name: programming
+- slug: rails
+  name: rails
+- slug: rspec
+  name: rspec
 - slug: ruby
   name: ruby
 - slug: untagged

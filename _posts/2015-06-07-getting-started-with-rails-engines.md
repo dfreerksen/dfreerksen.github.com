@@ -2,19 +2,16 @@
 title: Getting started with Rails Engines
 date: 2015-06-07 21:22:19
 categories:
-- ruby
 - rails
 - rspec
+- ruby
 tags:
-- ruby
 - rails
 - rspec
+- ruby
 ---
 
-If you work with Ruby on Rails at all, at some point, you're going to need to make a Rails engine. It is a lot easier than it looks or sounds.
-
-Essentially, what a Rails engine is, is a Rails app that gets loaded into another Rails app. It has a similar structure as any other Rails application.
-
+If you work with Ruby on Rails at all, at some point, you're going to need to make a Rails engine. It is a lot easier than it looks or sounds. Essentially, what a Rails engine is, is a Rails app that gets loaded into another Rails app. It has a similar structure as any other Rails application.
 
 The first thing you need to do is determine a name. If you are going to put it on [RubyGems][ruby_gems], head on over and make sure the name isn't already taken. RubyGems also has some [basic guides][ruby_gems_guides] on how to name your engine; use only lower case letters, use underscore for multiple words (no spaces), and use dashes for extensions.
 
