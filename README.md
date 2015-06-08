@@ -95,13 +95,13 @@ gulp organize
 [Jekyll](http://jekyllrb.com/) is used to build this site. To build the site, run:
 
 ```
-jekyll build
+bundle exec jekyll build
 ```
 
 To build the site but also watch for file changes, run:
 
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 This will start a Rake server to allow you to view the site in the browser by going to [http://localhost:4000/](http://localhost:4000/)
@@ -142,7 +142,7 @@ gulp
 Build the site
 
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 
