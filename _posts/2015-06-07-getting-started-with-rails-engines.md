@@ -78,11 +78,11 @@ Also, if you used the `--full` or `--mountable` flag, edit your engine's `lib/fo
 ```
 module FooBar
   class Engine < ::Rails::Engine
-    isolate_namespace GemName
+    isolate_namespace FooBar
 
     config.generators do |g|
       g.test_framework :rspec
-      g.fixture_replacement :factory_girl, dir/ 'spec/factories'
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
   end
 end
