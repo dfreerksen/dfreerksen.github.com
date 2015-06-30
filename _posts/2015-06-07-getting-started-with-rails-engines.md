@@ -19,8 +19,8 @@ Out of the box, Rails uses [Test::Unit][test_unit] at the default test framework
 
 For the purposes of this post, we'll use the name `foo_bar` as the engine name.
 
-```
-rails plugin new foo_bar -T --dummy-path=spec/dummy
+```bash
+$ rails plugin new foo_bar -T --dummy-path=spec/dummy
 ```
 
 `-T` tells the generator to not generate the `test` directory (where the generated Test::Unit files are put).
@@ -51,31 +51,31 @@ The directory structure should look something like this
 
 You can also add the `--mountable` flag which will create the engine in an isolated namespace. All of your controllers, models, etc will be use the `FooBar::` namespace.
 
-```
-rails plugin new foo_bar -T --dummy-path=spec/dummy --mountable
+```bash
+$ rails plugin new foo_bar -T --dummy-path=spec/dummy --mountable
 ```
 
 You can also add the `--full` flag which will create the engine and share the namespace of the main app.
 
-```
-rails plugin new foo_bar -T --dummy-path=spec/dummy --full
+```bash
+$ rails plugin new foo_bar -T --dummy-path=spec/dummy --full
 ```
 
 Let's add [Rspec][rspec_rails] as a dependency to the gem. Open `foo_bar.gemspec`. At the bottom, add:
 
-```
+```ruby
 s.add_development_dependency "rspec-rails", "~> 3.2.3"
 ```
 
 If you used the `--full` or `--mountable` flag, add [FactoryGirl][factory_girl_rails] as a dependency to the gem. Open `foo_bar.gemspec`. At the bottom, add:
 
-```
+```ruby
 s.add_development_dependency "factory_girl_rails", "~> 4.5.0"
 ```
 
 Also, if you used the `--full` or `--mountable` flag, edit your engine's `lib/foo_bar/engine.rb` file to include a couple RSpec configurations. This will generate the appropriate RSpec files when you generate a controller or model in your engine.
 
-```
+```ruby
 module FooBar
   class Engine < ::Rails::Engine
     isolate_namespace FooBar
@@ -92,33 +92,33 @@ Run `bundle install`.
 
 Run the RSpec generator:
 
-```
-rails generate rspec:install
+```bash
+$ rails generate rspec:install
 ```
 
 This will create `.rspec`, `spec/spec_helper.rb`, and `spec/rails_helper.rb`.
 
 Open `rails_helper.rb`. Change the line
 
-```
+```ruby
 require File.expand_path('../../config/environment', __FILE__)
 ```
 
 to
 
-```
+```ruby
 require File.expand_path('../dummy/config/environment', __FILE__)
 ```
 
 This corrects the path to where the tests can load the environment. Also inside `rails_helper.rb`, uncomment the following line:
 
-```
+```ruby
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 ```
 
 Create `support/factory_girl.rb`. Inside it add
 
-```
+```ruby
 require 'factory_girl_rails'
 
 RSpec.configure do |config|
@@ -130,9 +130,9 @@ You can now either create factories for your models in `spec/factories/` or they
 
 After creating some models and migrations, run the migrations for the test app and the test database:
 
-```
-bundle exec rake app:db:migrate
-bundle exec rake app:db:test:prepare
+```bash
+$ bundle exec rake app:db:migrate
+$ bundle exec rake app:db:test:prepare
 ```
 
 Run `bundle exec rspec spec`.
