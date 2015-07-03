@@ -16,7 +16,7 @@ After working with Ruby and Rails for a while, you start to take stuff for grant
 The first thing you will need to start using Ruby is... [Ruby][ruby]. Apple computers come with Ruby already installed. I believe most \*nix distributions do as well. Windows does not. If you aren't sure if you have Ruby installed or not, open up a command line window and enter
 
 ```bash
-ruby -v
+$ ruby -v
 ```
 
 If you have Ruby installed, it should come back with something along the lines of `ruby 2.2.2p95 [2015-04-13 revision 50295] [x86_64-darwin14]`. If you do not have it installed, it will come back with something like `bash: ruby: command not found`
@@ -66,7 +66,7 @@ $ ruby -v
 $ rbenv version
 ```
 
-At this point, you're ready to start using Ruby. I understand at this point, it just brings up more questions. The first one that comes to mind is, "What now?" In the future, I'll do a couple more posts for getting started with gems and Bundlers and getting started with Rails. Stay tuned!
+At this point, you're ready to start using Ruby. I understand at this point, it just brings up more questions. The first one that comes to mind is, "What now?" I'll have to write a couple more posts about getting started with gems and Bundler, getting started with Rails, and [getting started with Rails engines]({% post_url 2015-06-07-getting-started-with-rails-engines %}). Until then, happy coding!
 
 [ruby]: https://www.ruby-lang.org/en/
 [ruby-downloads]: https://www.ruby-lang.org/en/downloads/
