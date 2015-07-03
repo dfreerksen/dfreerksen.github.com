@@ -1,5 +1,5 @@
 ---
-title: Getting started with Rails Engines
+title: Getting started with Rails engines
 date: 2015-06-07 21:22:19
 categories:
 - rails
