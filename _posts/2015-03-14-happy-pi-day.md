@@ -15,4 +15,6 @@ As I said, this year is important. Every century (100 years), there is only one 
 
 The next year that will be so nerdy/important is in the year 2115.
 
-Bone up on your [Pi knowledge](http://en.wikipedia.org/wiki/Pi) while you eat some pie!
+Bone up on your [Pi knowledge][pi] while you eat some pie!
+
+[pi]: http://en.wikipedia.org/wiki/Pi
