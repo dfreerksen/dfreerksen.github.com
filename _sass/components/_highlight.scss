@@ -14,6 +14,10 @@
 
   code {
     white-space: pre;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
   }
 
   .lineno { color: #000000; display: none; } /* Line numbers */

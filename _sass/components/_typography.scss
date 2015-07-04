@@ -17,12 +17,13 @@ kbd {
   padding: 1px 4px;
 }
 
+code,
 var {
   margin: 0;
   border: 1px solid $light-gray;
   background-color: $super-light-gray;
   @include border-radius(3px);
-  padding: 0 4px 0 0;
+  padding: 0 4px;
 
   &:before,
   &:after {
