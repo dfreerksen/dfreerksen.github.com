@@ -106,6 +106,8 @@ exclude:
   - /node_modules
   - package.json
   - npm-debug.log
+  - /assets/css
+  - /assets/js
 
 # Markdown
 markdown: redcarpet
