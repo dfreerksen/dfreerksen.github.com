@@ -36,10 +36,22 @@ module.exports = {
   },
 
   copy: {
+    bourbon: {
+      src: bower + 'bourbon/app/assets/stylesheets/**/*',
+      dest: build + 'css/bourbon'
+    },
     jquerymap: {
       src: bower + 'jquery/dist/jquery.min.map',
       dest: build + 'javascripts',
       rename: 'jquery.min.map'
+    },
+    neat: {
+      src: bower + 'neat/app/assets/stylesheets/**/*',
+      dest: build + 'css/neat'
+    },
+    normalize: {
+      src: bower + 'normalize-scss/_normalize.scss',
+      dest: build + 'css/plugins'
     }
   },
 
@@ -85,6 +97,7 @@ module.exports = {
 
   watch: {
     src: {
+      copy:        ext.copy,
       images:      ext.images,
       fonts:       ext.fonts,
       javascripts: ext.javascripts,

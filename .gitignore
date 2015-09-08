@@ -8,4 +8,6 @@ npm-debug.log
 _drafts/*.md
 
 # Ignored from build system
-_javascript/site.js
+/assets/css/bourbon
+/assets/css/neat
+/assets/css/plugins/_normalize.scss
