@@ -11,3 +11,4 @@ _drafts/*.md
 /assets/css/bourbon
 /assets/css/neat
 /assets/css/plugins/_normalize.scss
+/assets/css/plugins/_media-queries.scss
