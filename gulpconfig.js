@@ -45,6 +45,10 @@ module.exports = {
       dest: build + 'javascripts',
       rename: 'jquery.min.map'
     },
+    mediaqueries: {
+      src: bower + 'sass-mediaqueries/_media-queries.scss',
+      dest: build + 'css/plugins'
+    },
     neat: {
       src: bower + 'neat/app/assets/stylesheets/**/*',
       dest: build + 'css/neat'

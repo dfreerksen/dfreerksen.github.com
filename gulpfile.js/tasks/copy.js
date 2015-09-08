@@ -16,6 +16,12 @@ gulp.task('copy-jquerymap', function() {
     .pipe(gulp.dest(config.jquerymap.dest));
 });
 
+gulp.task('copy-mediaqueries', function() {
+  return gulp.src(config.mediaqueries.src)
+    .pipe(plugins.changed(config.mediaqueries.dest))
+    .pipe(gulp.dest(config.mediaqueries.dest));
+});
+
 gulp.task('copy-neat', function() {
   return gulp.src(config.neat.src)
     .pipe(plugins.changed(config.neat.dest))
@@ -28,4 +34,4 @@ gulp.task('copy-normalize', function() {
     .pipe(gulp.dest(config.normalize.dest));
 });
 
-gulp.task('copy', ['copy-bourbon', 'copy-jquerymap', 'copy-neat', 'copy-normalize']);
+gulp.task('copy', ['copy-bourbon', 'copy-jquerymap', 'copy-mediaqueries', 'copy-neat', 'copy-normalize']);
