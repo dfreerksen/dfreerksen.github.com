@@ -101,8 +101,8 @@ exclude:
   - TODO.md
   - bower.json
   - /bower_components
-  - gulpfile.js
-  - /gulp
+  - /gulpfile.js
+  - gulpconfig.js
   - /node_modules
   - package.json
   - npm-debug.log
