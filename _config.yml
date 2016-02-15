@@ -110,4 +110,4 @@ exclude:
   - /assets/js
 
 # Markdown
-markdown: redcarpet
+markdown: kramdown
