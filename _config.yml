@@ -68,7 +68,7 @@ defaults:
       layout: post
       article: true
       comments: true
-      sharing: true
+      sharing: false
   -
     scope:
       type: pages
