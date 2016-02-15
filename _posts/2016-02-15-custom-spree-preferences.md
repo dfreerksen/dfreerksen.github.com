@@ -21,7 +21,7 @@ Start off by creating a new [Spree extension][spree_extension].
 $ spree extension your_engine
 ```
 
-I am using `your_engine` as an example. You can name your extension whatever you like.
+You can name your extension whatever you like. I am using `your_engine` as an example. When generating a spree extension, `spree_` gets added as a prefix.
 
 For the first option of creating custom preferences, let's create the new preferences under the Spree namespace.
 
@@ -48,7 +48,7 @@ Spree::Config[:custom_foo] = "foo"
 Spree::Config["custom_foo"] = "foo"
 ```
 
-The second option for creating custom preferences has only one extra step. Using the `YourEngine` extension that we created earlier, start by creating a new file at `app/models/spree/your_engine_setting.rb`. Inside it, add the following
+The second option for creating custom preferences has only one extra step. Using the `SpreeYourEngine` extension that we created earlier, start by creating a new file at `app/models/spree/your_engine_setting.rb`. Inside it, add the following
 
 ```ruby
 module Spree
@@ -59,10 +59,18 @@ module Spree
 end
 ```
 
-We also need to initialize the preferences so they can be accessed. Inside `lib/your_engine/engine.rb` add the following
+We also need to initialize the preferences so they can be accessed. Inside `lib/spree_your_engine/engine.rb` add the following
 
 ```ruby
 initializer "your_engine.preferences", before: :load_config_initializers do
+  YourEngine::Config = Spree::YourEngineSetting.new
+end
+```
+
+Alternatively, you can initialize the preferences in the more traditional Rails way by creating `config/initializers/your_engine_preferences.rb` and adding the following
+
+```ruby
+module Spree
   YourEngine::Config = Spree::YourEngineSetting.new
 end
 ```
