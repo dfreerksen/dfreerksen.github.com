@@ -2,13 +2,13 @@
 title: Getting started with Rails engines
 date: 2015-06-07 21:22:19
 categories:
-- rails
-- rspec
-- ruby
+  - rails
+  - rspec
+  - ruby
 tags:
-- rails
-- rspec
-- ruby
+  - rails
+  - rspec
+  - ruby
 ---
 
 If you work with Ruby on Rails at all, at some point, you're going to need to make a Rails engine. It is a lot easier than it looks or sounds. Essentially, what a Rails engine is, is a Rails app that gets loaded into another Rails app. It has a similar structure as any other Rails application.
@@ -19,9 +19,9 @@ Out of the box, Rails uses [Test::Unit][test_unit] at the default test framework
 
 For the purposes of this post, we'll use the name `foo_bar` as the engine name.
 
-```bash
+{% highlight bash %}
 $ rails plugin new foo_bar -T --dummy-path=spec/dummy
-```
+{% endhighlight %}
 
 `-T` tells the generator to not generate the `test` directory (where the generated Test::Unit files are put).
 
@@ -29,7 +29,7 @@ $ rails plugin new foo_bar -T --dummy-path=spec/dummy
 
 The directory structure should look something like this
 
-```
+{% highlight none %}
 .
 ├── .gitignore
 ├── Gemfile
@@ -47,35 +47,35 @@ The directory structure should look something like this
 └── spec/
     └── dummy
         └── ...
-```
+{% endhighlight %}
 
 You can also add the `--mountable` flag which will create the engine in an isolated namespace. All of your controllers, models, etc will be use the `FooBar::` namespace.
 
-```bash
+{% highlight bash %}
 $ rails plugin new foo_bar -T --dummy-path=spec/dummy --mountable
-```
+{% endhighlight %}
 
 You can also add the `--full` flag which will create the engine and share the namespace of the main app.
 
-```bash
+{% highlight bash %}
 $ rails plugin new foo_bar -T --dummy-path=spec/dummy --full
-```
+{% endhighlight %}
 
 Let's add [Rspec][rspec_rails] as a dependency to the gem. Open `foo_bar.gemspec`. At the bottom, add:
 
-```ruby
+{% highlight ruby %}
 s.add_development_dependency "rspec-rails", "~> 3.2.3"
-```
+{% endhighlight %}
 
 If you used the `--full` or `--mountable` flag, add [FactoryGirl][factory_girl_rails] as a dependency to the gem. Open `foo_bar.gemspec`. At the bottom, add:
 
-```ruby
+{% highlight ruby %}
 s.add_development_dependency "factory_girl_rails", "~> 4.5.0"
-```
+{% endhighlight %}
 
 Also, if you used the `--full` or `--mountable` flag, edit your engine's `lib/foo_bar/engine.rb` file to include a couple RSpec configurations. This will generate the appropriate RSpec files when you generate a controller or model in your engine.
 
-```ruby
+{% highlight ruby %}
 module FooBar
   class Engine < ::Rails::Engine
     isolate_namespace FooBar
@@ -86,54 +86,54 @@ module FooBar
     end
   end
 end
-```
+{% endhighlight %}
 
 Run `bundle install`.
 
 Run the RSpec generator:
 
-```bash
+{% highlight bash %}
 $ rails generate rspec:install
-```
+{% endhighlight %}
 
 This will create `.rspec`, `spec/spec_helper.rb`, and `spec/rails_helper.rb`.
 
 Open `rails_helper.rb`. Change the line
 
-```ruby
+{% highlight ruby %}
 require File.expand_path('../../config/environment', __FILE__)
-```
+{% endhighlight %}
 
 to
 
-```ruby
+{% highlight ruby %}
 require File.expand_path('../dummy/config/environment', __FILE__)
-```
+{% endhighlight %}
 
 This corrects the path to where the tests can load the environment. Also inside `rails_helper.rb`, uncomment the following line:
 
-```ruby
+{% highlight ruby %}
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-```
+{% endhighlight %}
 
 Create `support/factory_girl.rb`. Inside it add
 
-```ruby
+{% highlight ruby %}
 require 'factory_girl_rails'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 end
-```
+{% endhighlight %}
 
 You can now either create factories for your models in `spec/factories/` or they will be generated into that directory.
 
 After creating some models and migrations, run the migrations for the test app and the test database:
 
-```bash
+{% highlight bash %}
 $ bundle exec rake app:db:migrate
 $ bundle exec rake app:db:test:prepare
-```
+{% endhighlight %}
 
 Run `bundle exec rspec spec`.
 

@@ -1,50 +1,31 @@
 ---
 layout: default
 ---
-<div class="post">
-  <div id="pagination-top" class="pagination">
-    {% include posts/prev_next.html %}
-  </div>
 
-  {% assign post = page %}
-  {% if post.tags.size > 0 %}
-    {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
-    {% for post_tag in post.tags %}
-      {% for data_tag in site.data.tags %}
-        {% if data_tag.slug == post_tag %}
-          {% assign tag = data_tag %}
-        {% endif %}
-      {% endfor %}
-      {% if tag %}
-        {% capture tags_content_temp %}{{ tags_content }}<a href="{{ "/tag/" | prepend: site.base_url }}{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
-        {% assign tags_content = tags_content_temp %}
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    {% assign tags_content = '' %}
-  {% endif %}
-
-  <header class="post-header">
-    <h3 class="post-title">{{ page.title }}</h3>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
-    <p class="post-tags">{{ tags_content }}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-  {% if page.sharing %}
-  <footer class="post-footer">
-    {% include posts/share.html %}
-  </footer>
-  {% endif %}
-
-  <div id="pagination-bottom" class="pagination">
-    {% include posts/prev_next.html %}
-  </div>
-
-  {% if page.comments %}
-    {% include posts/comments.html %}
-  {% endif %}
+<div class="page-header" itemprop="name headline">
+  <h1>{{ page.title }}</h1>
 </div>
+
+<article class="row post-full" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="col-xs-12">
+    <div id="pagination-top">
+      {% include posts/pager.html %}
+    </div>
+
+    <div class="date">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    </div>
+
+    <div class="content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <div id="pagination-bottom">
+      {% include posts/pager.html %}
+    </div>
+
+    {% if page.comments %}
+      {% include posts/comments.html %}
+    {% endif %}
+  </div>
+</article>

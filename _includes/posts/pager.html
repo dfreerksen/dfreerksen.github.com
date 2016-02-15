@@ -1,0 +1,6 @@
+<nav>
+  <ul class="pager">
+    <li class="previous {% unless page.previous %}disabled{% endunless %}"><a href="{{ page.previous.url | prepend: site.baseurl }}" title="{{ page.previous.title }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+    <li class="next {% unless page.next %}disabled{% endunless %}"><a href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>

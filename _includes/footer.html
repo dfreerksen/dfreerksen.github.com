@@ -1,56 +1,49 @@
-<footer id="footer">
-  <div class="inner">
-    <div class="social">
-      <ul>
-        {% if site.social.twitter %}
-        <li>
-          <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank">
-            <i class="fa fa-twitter"></i>
-            <span class="username">Follow me on Twitter</span>
-          </a>
-        </li>
-        {% endif %}
+<nav id="footer" class="navbar navbar-default navbar-static-bottom">
+  <div class="container text-center">
+    <ul class="list-inline">
+      {% if site.social.twitter %}
+      <li>
+        <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" title="Follow me on Twitter">
+          <i class="fa fa-twitter"></i> <span class="hide">Follow me on Twitter</span>
+        </a>
+      </li>
+      {% endif %}
 
-        {% if site.social.facebook %}
-        <li>
-          <a href="https://facebook.com/{{ site.social.facebook }}" target="_blank">
-            <i class="fa fa-facebook-square"></i>
-            <span class="username">Like me on Facebook</span>
-          </a>
-        </li>
-        {% endif %}
+      {% if site.social.facebook %}
+      <li>
+        <a href="https://facebook.com/{{ site.social.facebook }}" target="_blank" title="Like me on Facebook">
+          <i class="fa fa-facebook-square"></i> <span class="hide">Like me on Facebook</span>
+        </a>
+      </li>
+      {% endif %}
 
-        {% if site.social.instagram %}
-        <li>
-          <a href="http://instagram.com/{{ site.social.instagram }}" target="_blank">
-            <i class="fa fa-instagram"></i>
-            <span class="username">Like me on Instagram</span>
-          </a>
-        </li>
-        {% endif %}
+      {% if site.social.instagram %}
+      <li>
+        <a href="http://instagram.com/{{ site.social.instagram }}" target="_blank" title="Like me on Instagram">
+          <i class="fa fa-instagram"></i> <span class="hide">Like me on Instagram</span>
+        </a>
+      </li>
+      {% endif %}
 
-        {% if site.social.github %}
-        <li>
-          <a href="https://github.com/{{ site.social.github }}" target="_blank">
-            <i class="fa fa-github"></i>
-            <span class="username">Fork me on Github</span>
-          </a>
-        </li>
-        {% endif %}
+      {% if site.social.github %}
+      <li>
+        <a href="https://github.com/{{ site.social.github }}" target="_blank" title="Fork me on Github">
+          <i class="fa fa-github"></i> <span class="hide">Fork me on Github</span>
+        </a>
+      </li>
+      {% endif %}
 
-        {% if site.social.linkedin %}
-        <li>
-          <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank">
-            <i class="fa fa-linkedin"></i>
-            <span class="username">Connect on Linkedin</span>
-          </a>
-        </li>
-        {% endif %}
-      </ul>
-    </div>
+      {% if site.social.linkedin %}
+      <li>
+        <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" title="Connect on Linkedin">
+          <i class="fa fa-linkedin"></i> <span class="hide">Connect on Linkedin</span>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
 
-    <div class="copyright">
-      &copy; {{ site.time | date: '%Y' }} David Freerksen | <a href="{{ "/sitemap.xml" | prepend: site.baseurl }}">Sitemap</a> | Design by <a href="http://www.joshadamboyd.com/">JoshAdamBoyd</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">Github</a>, and magic.
-    </div>
+    <p>
+      &copy; {{ site.time | date: '%Y' }} {{ site.title }} | Design by <a href="http://www.joshadamboyd.com/">JoshAdamBoyd</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://github.com/">Github</a>, and magic.
+    </p>
   </div>
-</footer>
+</nav>

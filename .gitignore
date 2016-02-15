@@ -1,14 +1,5 @@
 _site
 .sass-cache
 .DS_Store
-Gemfile.lock
-/bower_components
-/node_modules
-npm-debug.log
 _drafts/*.md
-
-# Ignored from build system
-/assets/css/bourbon
-/assets/css/neat
-/assets/css/plugins/_normalize.scss
-/assets/css/plugins/_media-queries.scss
+.jekyll-metadata

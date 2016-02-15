@@ -1,8 +1,11 @@
+# Encoding
+encoding: utf-8
+
 # Site
 title: David Freerksen
 email: dfreerksen@gmail.com
 description: David Freerksen is a software engineer located in Elk Grove, Calfironia. Specializing in Ruby, Rails, PHP, SQL, HTML, CSS and Javascript development.
-keywords:
+keywords: # Site keywords
   - david
   - freerksen
   - davidfreerksen
@@ -13,53 +16,53 @@ keywords:
   - javascript
 
 # URLs and paths
-baseurl: ""
-url: http://www.davidfreerksen.com
-
-# Version
-version: 1.2.0 # format: major.update.fix
-
-# Encoding
-encoding: utf-8
+baseurl: "" # Base path of your site. Useful when your Jekyll site is at /blog
+url: http://www.davidfreerksen.com # Base URL of your site
 
 # Social networks
-social:
+social: # Social media usernames
   twitter: dfreerksen
   facebook: dfreerksen
   instagram: dfreerksen
   github: dfreerksen
   linkedin: dfreerksen
 
-# Available for hire
-available: false
-
 # Disqus comments
-disqus: davidfreerksen
+comments:
+  provider: disqus # Comments provider. Only one can be used
+  disqus:
+    short_name: davidfreerksen
+  facebook:
+    app_id:
+    num_posts: 5
+    width: 100%
+    colorscheme: light
 
 # Analytics
-analytics:
-  google: UA-59502340-1
+analytics: # Site analytics. Multiple can be used at the same time
+  google:
+    tracking_id: UA-59502340-1
+  mixpanel:
+    token:
 
 # Site verification
-verification:
+verification: # Site verification
+  google:
   msvalidate: 8F639718B84CBE19F52EA4AC7CBA1D06
 
 # Pagination
-paginate: 10
-permalink: /posts/:year/:month/:day/:title/
-paginate_path: /page/:num
+paginate: 12 # Number of posts to display per page
+permalink: /posts/:year/:month/:day/:title/ # Post URL format
+paginate_path: /page/:num # Post pagination URL format
 
 # Excerpts
 # excerpt_separator: <!--more-->
 
+# Timezone
+timezone: America/Los_Angeles # Your timezone
+
 # Default layouts
 defaults:
-  -
-    scope:
-      path: tag
-    values:
-      type: tag
-      layout: tag
   -
     scope:
       type: posts
@@ -85,29 +88,10 @@ sass:
 # Plugins
 gems:
   - jekyll-sitemap
-
-# Timezone
-timezone: America/Los_Angeles
-
-# Include in build
-include:
-  - .htaccess
+  - jekyll-paginate
+  - jekyll-coffeescript
+  - jekyll-gist
 
 # Exclude in build
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - README.md
-  - TODO.md
-  - bower.json
-  - /bower_components
-  - /gulpfile.js
-  - gulpconfig.js
-  - /node_modules
-  - package.json
-  - npm-debug.log
-  - /assets/css
-  - /assets/js
-
-# Markdown
-markdown: kramdown

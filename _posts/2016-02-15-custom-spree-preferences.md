@@ -17,9 +17,9 @@ If the preferences are for the benefit of only your extension, it's better to cr
 
 Start off by creating a new [Spree extension][spree_extension].
 
-```bash
+{% highlight bash %}
 $ spree extension your_engine
-```
+{% endhighlight %}
 
 You can name your extension whatever you like. I am using `your_engine` as an example. When generating a spree extension, `spree_` gets added as a prefix.
 
@@ -27,16 +27,16 @@ For the first option of creating custom preferences, let's create the new prefer
 
 Here, we need to extend the existing `app_configuration.rb` model. In Spree, extending an existing model or controller requires you adding `_decorator` to the file name. Create a new file named `app/models/spree/app_configuration_decorator.rb`. Inside it, add the following
 
-```ruby
+{% highlight ruby %}
 Spree::AppConfiguration.class_eval do
   preference :custom_foo, :string, default: "bar"
   preference :custom_count, :integer, default: 1
 end
-```
+{% endhighlight %}
 
 This is all that needs to be done. Access to the preferences can be done the same way as other Spree preferences:
 
-```ruby
+{% highlight ruby %}
 # get
 Spree::Config.custom_foo
 Spree::Config[:custom_foo]
@@ -46,38 +46,38 @@ Spree::Config["custom_foo"]
 Spree::Config.custom_foo = "foo"
 Spree::Config[:custom_foo] = "foo"
 Spree::Config["custom_foo"] = "foo"
-```
+{% endhighlight %}
 
 The second option for creating custom preferences has only one extra step. Using the `SpreeYourEngine` extension that we created earlier, start by creating a new file at `app/models/spree/your_engine_setting.rb`. Inside it, add the following
 
-```ruby
+{% highlight ruby %}
 module Spree
   class YourEngineSetting < Preferences::Configuration
     preference :custom_foo, :string, default: "bar"
     preference :custom_count, :integer, default: 1
   end
 end
-```
+{% endhighlight %}
 
 We also need to initialize the preferences so they can be accessed. Inside `lib/spree_your_engine/engine.rb` add the following
 
-```ruby
+{% highlight ruby %}
 initializer "your_engine.preferences", before: :load_config_initializers do
   YourEngine::Config = Spree::YourEngineSetting.new
 end
-```
+{% endhighlight %}
 
 Alternatively, you can initialize the preferences in the more traditional Rails way by creating `config/initializers/your_engine_preferences.rb` and adding the following
 
-```ruby
+{% highlight ruby %}
 module Spree
   YourEngine::Config = Spree::YourEngineSetting.new
 end
-```
+{% endhighlight %}
 
 Access to the preferences is still similar to accessing Spree preferences:
 
-```ruby
+{% highlight ruby %}
 # get
 YourEngine::Config.custom_count
 YourEngine::Config[:custom_count]
@@ -87,17 +87,17 @@ YourEngine::Config["custom_count"]
 YourEngine::Config.custom_count = 2
 YourEngine::Config[:custom_count] = 3
 YourEngine::Config["custom_count"] = 4
-```
+{% endhighlight %}
 
 Updating custom preferences through a form submit is rather simple too. You can update one by one, or you can run the values through an `each` to update them. The following would work well
 
-```ruby
+{% highlight ruby %}
 params.each do |name, value|
   next unless YourEngine::Config.has_preference? name
 
   YourEngine::Config[name] = value
 end
-```
+{% endhighlight %}
 
 [solidus_github]: https://github.com/solidusio/solidus
 [spree_github]: https://github.com/spree/spree

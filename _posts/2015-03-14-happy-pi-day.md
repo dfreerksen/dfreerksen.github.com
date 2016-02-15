@@ -2,9 +2,9 @@
 title: Happy Pi Day
 date: 2015-03-14 09:26:53
 categories:
-- misc
+  - misc
 tags:
-- nerdalert
+  - nerdalert
 ---
 
 I celebrate every year on Pi Day. By eating pie. This is a special year though.

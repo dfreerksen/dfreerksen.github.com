@@ -1,9 +1,0 @@
-/*-- Print (Media Query) -----------------------------------------------------*/
-
-@mixin print
-{
-  @media print
-  {
-    @content;
-  }
-}

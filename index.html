@@ -2,41 +2,44 @@
 layout: default
 ---
 
-<div class="posts">
-  <header class="page-header">
-    <h2 class="page-heading">Posts</h2>
-  </header>
+<div class="page-header">
+  <h1>Posts</h1>
+</div>
 
-  <div id="pagination-top">
-    {% include posts/pagination.html %}
-  </div>
+<div class="row">
+  <div class="col-xs-12">
+    <div id="pagination-top">
+      {% include pagination.html %}
+    </div>
 
-  {% if paginator.posts %}
-    <ul class="post-list">
-      {% for post in paginator.posts %}
-        <li>
-          <header class="post-header">
-            <h3 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-          </header>
+    {% if paginator.posts %}
+      <ul class="list-group">
+        {% for post in paginator.posts %}
+          <li class="list-group-item" itemscope itemtype="http://schema.org/BlogPosting">
+            <div class="page-header" itemprop="name headline">
+              <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+            </div>
 
-          <article class="post-content">
-            {{ post.excerpt | strip_html}}
-          </article>
+            <div class="date">
+              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+            </div>
 
-          <footer class="post-footer">
+            <div class="content" itemprop="articleBody">
+              {{ post.excerpt | strip_html}}
+            </div>
+
             <p class="post-more">
               <a href="{{ post.url | prepend: site.baseurl }}">Read more &raquo;</a>
             </p>
-          </footer>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No posts found.</p>
-  {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No posts found.</p>
+    {% endif %}
 
-  <div id="pagination-bottom">
-    {% include posts/pagination.html %}
+    <div id="pagination-bottom">
+      {% include pagination.html %}
+    </div>
   </div>
 </div>

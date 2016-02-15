@@ -1,26 +1,18 @@
 <!doctype html>
 <html lang="en"{% if "post" == page.type %} itemscope itemtype="http://schema.org/Article"{% endif %}>
-{% include head.html %}
-{% if "index" == page.url | remove_first:"/" | replace:".html","" %}
-  {% capture body_class %}homepage{% endcapture %}
-{% else %}
-  {% capture body_class %}{{ page.type }}{% endcapture %}
-{% endif %}
-<body class="{{ body_class }}">
+  {% include head.html %}
+  <body>
+    {% include iealert.html %}
+    {% include noscript.html %}
 
-  {% include iealert.html %}
+    {% include header.html %}
 
-  {% include noscript.html %}
+    <div class="container">
+      {{ content }}
+    </div>
 
-  {% include header.html %}
+    {% include footer.html %}
 
-  <div id="wrapper">
-    {{ content }}
-  </div>
-
-  {% include footer.html %}
-
-  {% include foot.html %}
-
-</body>
+    {% include foot.html %}
+  </body>
 </html>

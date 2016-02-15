@@ -2,10 +2,10 @@
 title: Getting started with Jekyll
 date: 2015-03-15 11:18:18
 categories:
-- programming
+  - programming
 tags:
-- ruby
-- cli
+  - ruby
+  - cli
 ---
 
 For the longest time, I've had a Wordpress blog. Most people start off with Wordpress. Wordpress is quick to set up, easy to use, and simply to maintain. My biggest issue with Wordpress is that it uses a database. I, like most people, don't update my blog or website enough to require a database be queried for every page request. The only real need for a database is for comments. Using [Disqus][disqus] for comments, you no longer need to use a database.
@@ -25,9 +25,9 @@ First, start up Terminal. Terminal is located at `/Applications/Utilities/Termin
 
 If you are on a Mac, Ruby came pre-installed on your computer. Just out of curiosity, let's check the version of Ruby we are running:
 
-```bash
+{% highlight bash %}
 $ ruby -v
-```
+{% endhighlight %}
 
 Note that the `$` above should not be entered into Terminal. The `$` represents the prompt where you can enter commands into Terminal.
 
@@ -35,15 +35,15 @@ If it comes back with `ruby: command not found`, you don't have Ruby installed. 
 
 The next thing we need to do is install the Jekyll gem. In Terminal, enter:
 
-```bash
+{% highlight bash %}
 $ gem install jekyll
-```
+{% endhighlight %}
 
 The next thing we have to do is decide where to put our new Jekyll site. You can decide on your own where you want to set it up. For the purpose of this post, we'll set it up in `~/Documents`. So we need to move Terminal to be in the `~/Documents` directory.
 
-```bash
+{% highlight bash %}
 $ cd ~/Documents
-```
+{% endhighlight %}
 
 The `~` represents your home directory. Your home directory is generally located at `/Users/<your-account>`. When you enter `cd ~/Documents` you are actually entering `cd /Users/<your-account>/Documents`. You can move around through directories using `cd`. This is the Unix command for change directory
 
@@ -51,19 +51,19 @@ Side note: At any time, if you are not sure what directory you are in using Term
 
 The next step is the fun one. Generating a basic Jekyll site. When Jekyll generates a new site, it has to collect all of the files in one place. To generate a new Jekyll install for the site, run the following:
 
-```bash
+{% highlight bash %}
 $ jekyll new my-site
-```
+{% endhighlight %}
 
 It should tell you `New jekyll site installed in /Users/<your-account>/Documents/my-site`. A basic Jekyll site was just generated for you into a new folder named `my-site`. Now move into the `my-site` directory.
 
-```bash
+{% highlight bash %}
 $ cd my-site
-```
+{% endhighlight %}
 
 Jekyll just generated a bunch of files for you. Your directory structure should look something like this
 
-```
+{% highlight none %}
 .
 ├── .gitignore
 ├── _config.yml
@@ -86,21 +86,21 @@ Jekyll just generated a bunch of files for you. Your directory structure should 
 |   └── main.css
 ├── feed.xml
 └── index.html
-```
+{% endhighlight %}
 
 Now that we have the files generates, let's see what the site looks like. We have two options; build and serve.
 
-```bash
+{% highlight bash %}
 $ jekyll build
-```
+{% endhighlight %}
 
 This will generate the site and place all of the generated files in a new directory named `_site` (`/Users/<your-account>/Documents/my-site/_site`). This will only generate the site. Any changes you make to the files will not be reflected until you run this command again.
 
 Jekyll comes with a built-in development server that will allow you to locally view the generated site in your browser.
 
-```bash
+{% highlight bash %}
 $ jekyll serve
-```
+{% endhighlight %}
 
 This will start the development server and allow you to browse the site by going to `http://localhost:4000` or `http://127.0.0.1:4000`. The files for your site where generated and added to the `_site` directory. This will also watch for file changes. So when you make changes to a post, page, stylesheet, or layout, the site will automatically be regenerated for you. All you have to do is refresh the browser to see the changes. If you make changes to the config file (`_config.yml`), you will need to restart the development server. You can do this by entering `Ctrl + c` in Terminal to stop the server. Start the server again by entering `jekyll serve`
 
