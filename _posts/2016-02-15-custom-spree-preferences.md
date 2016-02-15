@@ -52,7 +52,7 @@ The second option for creating custom preferences has only one extra step. Using
 
 ```ruby
 module Spree
-  class YouEngineSetting < Preferences::Configuration
+  class YourEngineSetting < Preferences::Configuration
     preference :custom_foo, :string, default: "bar"
     preference :custom_count, :integer, default: 1
   end
