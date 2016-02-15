@@ -16,6 +16,8 @@
   name: rspec
 - slug: ruby
   name: ruby
+- slug: spree
+  name: spree
 - slug: untagged
   name: untagged
 - slug: update
